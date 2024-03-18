@@ -99,8 +99,12 @@ main {
 }
 
 main .home{
-    background-color: rgb(131, 131, 30);
-    height: 50vh;
+    background-color: rgb(230, 199, 225);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
 }
 
 main .about{
@@ -118,17 +122,62 @@ main .projects{
     height: 50vh;
 }
 
+
+/*styling contact information section*/
 main .contact{
     background-color: rgb(131, 131, 30);
     height: 40vh;
 }
 
+/* Basic button styles */
+.social-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #3b5998; /* Facebook */
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Button hover effect */
+  .social-btn:hover {
+    background-color: #2a488e; /* Darker shade of Facebook color */
+  }
+
+  /* Different social media buttons */
+  .facebook {
+    background-color: #3b5998; /* Facebook */
+  }
+  
+  .twitter {
+    background-color: #1da1f2; /* Twitter */
+  }
+  
+  .instagram {
+    background: linear-gradient(to right, #405de6, #5851db, #833ab4); /* Instagram */
+  }
+  
+  .linkedin {
+    background-color: #0077b5; /* LinkedIn */
+  }
+
+
 
 /******************************************************************/
 /*styling the footer*/
 footer {
-    background-color: violet;
-    height: 100px;
+    background-color: #391236;
+    height: 70px;
+    color: #d5d4d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /******************************************************************/
