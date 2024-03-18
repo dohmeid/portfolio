@@ -1,0 +1,136 @@
+:root {
+    --grey-shade: rgb(119, 118, 118);
+    --light-grey-shade: rgb(223, 221, 221);
+    --green-tick: #4CBB17;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin-top: 55px;
+}
+
+
+/******************************************************************/
+/*styling the header*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 20px 0 rgb(40, 39, 39);
+    background-color: #391236;
+    padding: 0px 30px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header .logo {
+    font-size: 20px;
+    flex: 2.5 0 0;
+}
+
+header .logo a:hover {
+    background-color: bisque;
+}
+
+header nav {
+    flex: 1 0 0;
+}
+
+header nav ul {
+    justify-content: space-between;
+    list-style: none;
+    display: flex;
+
+}
+
+header nav ul li {
+    font-size: 16px;
+}
+
+header nav ul li:hover {
+    background-color: #4CBB17;
+}
+
+/*button redirects to the home page*/
+.up-button a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    padding: 8px 12px;
+    font-size: 20px;
+    border-radius: 5px;
+
+   
+    color: #fff;
+    background: #300338;
+    
+}
+
+.up-button a:hover {
+    color: #300338;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+
+
+/******************************************************************/
+/*styling the main pages*/
+main {
+    background-color: beige;
+    height: auto;
+}
+
+main .home{
+    background-color: rgb(131, 131, 30);
+    height: 50vh;
+}
+
+main .about{
+    background-color: rgb(232, 83, 83);
+    height: 50vh;
+}
+
+main .skills{
+    background-color: rgb(65, 186, 17);
+    height: 50vh;
+}
+
+main .projects{
+    background-color: rgb(169, 217, 224);
+    height: 50vh;
+}
+
+main .contact{
+    background-color: rgb(131, 131, 30);
+    height: 40vh;
+}
+
+
+/******************************************************************/
+/*styling the footer*/
+footer {
+    background-color: violet;
+    height: 100px;
+}
+
+/******************************************************************/
+/*media queries*/
+@media (max-width: 600px) {}
