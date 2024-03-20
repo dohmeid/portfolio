@@ -18,19 +18,26 @@
     <!--including font awesome v4 icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <!--including google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Pacifico&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
 </head>
 
 
 <body>
 
-    <!-- header includes the navbar -->
+    <!-- header, includes the navbar -->
     <header>
         <div class="logo">
-            <a href="#home">Doha Hmeid</a>
+            <a href="#home-page"> &lt;DOHA HMEID/&gt;</a>
         </div>
         <nav>
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#home-page" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -41,7 +48,7 @@
 
     <!-- the up button -  redirects to home page -->
     <div class="up-button">
-        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        <a href="#home-page"><i class="fas fa-arrow-up"></i></a>
     </div>
 
 
@@ -49,10 +56,18 @@
     <main>
 
         <!-- home page section -->
-        <section class="home" id="home">
-            <h1>Hey, I'm Doha Hmeid</h1>
-            <p>Computer Systems Engineer | Front-end Developer | Tech Enthusiast</p>
-            <button>Download CV</button>
+        <section class="home-page" id="home-page">
+            <h1>DOHA HMEID</h1>
+            <div class="description">
+                <h2>Computer Systems Engineer | Front-end Developer | Tech Enthusiast</h2>
+                <p>Passionate about innovation and lifelong learning</p>
+            </div>
+            <div class="buttons-container">
+                <button type="button" class="contact-btn" id="contact-btn" tabindex="2" onclick="ContactMe()">Contact
+                    Me</button>
+                <button type="button" class="cv-btn" id="cv-btn" tabindex="1" onclick="downloadCV()"> Download CV
+                </button>
+            </div>
         </section>
 
 
@@ -60,12 +75,97 @@
         <section class="about" id="about">
             <h2>About Me</h2>
             <img src="https://via.placeholder.com/150" alt="Doha Profile Picture">
-            <p>hello world</p>
+            <ul>
+                <li>
+                    <p>
+                        Greetings! I'm Doha Hmeid, a computer systems engineering graduate from Birzeit University,
+                        where I graduated with honors. Currently in my final semester, I'm diligently completing my
+                        remaining academic hours to officially receive my degree.
+                    </p>
+                </li>
+                <li>
+                    <p>In the previous semester, I successfully concluded my graduation project, crafting an Android
+                        mobile application tailored to enhance the experience of visitors navigating through the
+                        intricate landscape of Birzeit University. This innovative app seamlessly integrates dynamic
+                        mapping functionalities, virtual tours, and real-time guidance, ensuring users have a
+                        comprehensive and secure campus exploration.</p>
+                </li>
+                <li>
+                    <p>
+                        My journey into web development started when I stumbled upon a web development course ad while
+                        scrolling through Facebook in 2021. I decided to give it a shot and instantly fell in love with
+                        the process of translating code into tangible websites.
+                    </p>
+                </li>
+                <li>
+                    <p>Subsequently, when the time for my university's summer internship arrived, I decided to pursue
+                        training in front-end development. I enrolled in an intensive 2-month training program at EXALT
+                        Technologies, where I delved into HTML, CSS, JavaScript, and the React framework. It was
+                        exhilarating to see my skills evolve and solidify. This experience marked my first real training
+                        in the field, and I enjoyed it so much that I resolved to pursue a career in front-end
+                        development.
+                    </p>
+                </li>
+                <li>
+                    <p>Realizing the need for further training to delve into intricacies, best practices, and advanced
+                        topics in front-end development to enhance my readiness for the competitive job market, I
+                        enrolled in Foothill Technology Solutions’ training program. Currently, I am expanding my skills
+                        and gaining more hands-on experience in the field.</p>
+                </li>
+                <li>
+                    <p>To me, front-end development is more than just coding; it's an ever-evolving journey that demands
+                        creativity, adaptability, and a deep understanding of browser dynamics. I'm driven by the thrill
+                        of mastering this complex craft and shaping meaningful digital experiences.
+                    </p>
+                </li>
+                <li>
+                    <p>Looking towards the future fills me with excitement and anticipation. Each day brings new
+                        opportunities for learning, growth, and innovation. I am eager to embrace whatever surprises lie
+                        ahead, prepared to leave my mark in the ever-evolving tech universe.</p>
+                </li>
+            </ul>
         </section>
+
 
         <!-- skills section -->
         <section class="skills" id="skills">
-            <h2>Skills</h2>
+            <h2>Skills & EXPERIENCE</h2>
+
+            <ul class="EXPERIENCE">
+                <li>
+                    <h3>Software Engineer</h3>
+                    <p>Foothill Technology Solutions, LLC. · Internship</p>
+                    <p>Feb 2024 - Present · 2 mos</p>
+                    <p>Ramallah, West Bank · Hybrid</p>
+                </li>
+
+                <li>
+                    <h3>Software Engineer</h3>
+                    <p>exalt Technology Solutions, LLC. · Internship</p>
+                    <p>Feb 2024 - Present · 2 mos</p>
+                    <p>Ramallah, West Bank · Hybrid</p>
+                </li>
+
+            </ul>
+
+            <ul class="skills">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React js</li>
+                <li>GIT</li>
+                <li>Github</li>
+                <li>Cypress</li>
+
+                <li>Java</li>
+                <li>C</li>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>MySQL</li>
+                <li>Data Structures</li>
+                <li>Databasees</li>
+            </ul>
+
         </section>
 
         <!-- projects section -->
@@ -98,7 +198,7 @@
                     <a href="#" class="social-btn instagram" target="_blank" title="Instagram"><i
                             class="fab fa-instagram"></i></a>
                 </li>
-                
+
                 <li>
                     <a href="#" class="social-btn linkedin" target="_blank" title="LinkedIn"><i
                             class="fab fa-linkedin-in"></i></a>
@@ -115,6 +215,15 @@
     </footer>
 
     <script>
+        //function to handle search queries 
+        function downloadCV() {
+            document.getElementById("search").nodeValue;
+        }
+
+        //function to handle search queries 
+        function ContactMe() {
+            document.getElementById("search").nodeValue;
+        }
     </script>
 </body>
 

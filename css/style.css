@@ -1,7 +1,35 @@
 :root {
-    --grey-shade: rgb(119, 118, 118);
-    --light-grey-shade: rgb(223, 221, 221);
-    --green-tick: #4CBB17;
+    --beige: #AA998A;
+    --beige2: #AC9C8D;
+    --turquoise: #2C424C;
+    --black: #050505;
+
+    /*the website's color palette */
+    --purple-light-shade1: #B8A7CBff;
+    --purple-light-shade2: #B089BE;
+    --purple-medium-shade1: #606AB1;
+    --purple-medium-shade2: #2D387B;
+    --purple-dark-shade: #402B3A;
+
+    --pink-light-shade1: #FBD7E1;
+    --pink-light-shade2: #E39BC4;
+    --pink-medium-shade1: #E7709C;
+    --pink-medium-shade2: #bc518c;
+    --pink-bold-shade: #D63484;
+
+    --beige-shade1: #FDF3EDff;
+    --beige-shade2: #FDF3EDff;
+    --green-shade: #D9E254;
+    --blue-shade: #A1C3D1;
+
+    /*
+    font combinations
+    */
+
+    --main-font1: "Pacifico", cursive;
+    --secondary-font1: "Quicksand", sans-serif;
+    --main-font2: "Oswald", sans-serif;
+    --secondary-font2: "Lato", sans-serif;
 }
 
 * {
@@ -21,110 +49,232 @@ body {
 
 
 /******************************************************************/
+/******************************************************************/
 /*styling the header*/
 header {
+    font-family: var(--secondary-font1);
     position: fixed;
     top: 0;
     width: 100%;
     height: 55px;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 20px 0 rgb(40, 39, 39);
-    background-color: #391236;
-    padding: 0px 30px;
-}
+    justify-content: center;
+    opacity: 0.8;
+    padding: 0px 50px;
+    background-color: var(--purple-dark-shade);
 
-header a {
-    color: white;
-    text-decoration: none;
+    & a {
+        color: var(--beige-shade2);
+        text-decoration: none;
+    }
 }
 
 header .logo {
-    font-size: 20px;
     flex: 2.5 0 0;
-}
+    font-family: var(--main-font1);
+    letter-spacing: 0.3rem;
 
-header .logo a:hover {
-    background-color: bisque;
+    & a:hover {
+        transition: 0.4s;
+        letter-spacing: 0.5rem;
+    }
 }
 
 header nav {
     flex: 1 0 0;
-}
 
-header nav ul {
-    justify-content: space-between;
-    list-style: none;
-    display: flex;
+    & ul {
+        align-items: canter;
+        justify-content: space-between;
+        list-style: none;
+        display: flex;
 
-}
+        & li {
+            & a {
+                box-shadow: inset 0 0 0 0 var(--beige-shade1);
+                margin: 0 -.25rem;
+                padding: 0 .25rem;
+                transition: color 0.3s ease-in-out, box-shadow .3s ease-in-out;
 
-header nav ul li {
-    font-size: 16px;
-}
+                &:hover {
+                    color: var(--purple-dark-shade);
+                    box-shadow: inset 100px 0 0 0 var(--beige-shade1);
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
 
-header nav ul li:hover {
-    background-color: #4CBB17;
-}
-
-/*button redirects to the home page*/
-.up-button a {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    
-    padding: 8px 12px;
-    font-size: 20px;
-    border-radius: 5px;
-
-   
-    color: #fff;
-    background: #300338;
-    
-}
-
-.up-button a:hover {
-    color: #300338;
-    background: #fff;
-    box-shadow: rgba(0, 0, 0, 0.15);
 }
 
 
 
 /******************************************************************/
+/*button redirects to the home page*/
+.up-button a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 8px 12px;
+    font-size: 20px;
+    border-radius: 5px;
+
+
+    color: #fff;
+    background: #300338;
+
+    &:hover {
+        color: #300338;
+        background: #fff;
+        box-shadow: rgba(0, 0, 0, 0.15);
+    }
+}
+
+
+
+/******************************************************************/
+/******************************************************************/
 /*styling the main pages*/
 main {
     background-color: beige;
-    height: auto;
 }
 
-main .home{
-    background-color: rgb(230, 199, 225);
+
+/******************************************************************/
+/******************************************************************/
+/*styling the home page*/
+main .home-page {
+    padding-top: 4rem;
     height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
+
+    background-image:
+        linear-gradient(to right, #9c698d00, #1c1d2000),
+        url('../images/pic6.gif');
+    background-position: center center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
 }
 
-main .about{
-    background-color: rgb(232, 83, 83);
-    height: 50vh;
+main .home-page h1 {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    font-family: var(--main-font2);
+    color: var(--purple-dark-shade);
+    text-shadow: 5px 3px 0px var(--beige-shade2);
+    box-sizing: border-box;
+
+    &:hover {
+        color: var(--beige-shade2);
+        text-shadow: 5px 3px 0px var(--pink-bold-shade);
+        box-shadow: inset 10em 0 0 0 var(--green-shade);
+        transition: 1s;
+    }
 }
 
-main .skills{
+
+main .home-page .description {
+    text-align: center;
+    border-top: 2px solid var(--purple-dark-shade);
+    margin-top: 0.5rem;
+    padding-top: 1.5rem;
+
+    & h2 {
+        font-size: 1.2rem;
+        word-spacing: 0.4rem;
+        font-family: var(--secondary-font2);
+    }
+
+    & p {
+        font-family: var(--secondary-font2);
+    }
+}
+
+main .home-page .buttons-container {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 11rem);
+    grid-template-rows: 3em;
+    gap: 4rem;
+
+    & button {
+        font-weight: bolder;
+
+        &:hover {
+            cursor: pointer;
+            transition: 0.5s;
+            transform: translateY(10px);
+            color: var(--beige-shade1);
+            background-color: var(--pink-bold-shade);
+            border: 2px solid var(--beige-shade1);
+            box-shadow: 5px 5px 10px 5px var(--green-shade);
+        }
+
+        &:focus {
+            /*for keyboard interactions*/
+            border: 4px solid var(--green-shade);
+        }
+    }
+
+    & .contact-btn {
+        text-transform: uppercase;
+        font-family: var(--secondary-font2);
+        font-size: 0.7rem;
+        letter-spacing: 0.1rem;
+
+        border: none;
+        border-radius: 5px;
+        color: var(--beige-shade1);
+        background-color: var(--purple-dark-shade);
+    }
+
+    & .cv-btn {
+        text-transform: uppercase;
+        font-family: var(--secondary-font2);
+        font-size: 0.7rem;
+        letter-spacing: 0.1rem;
+
+        border: 2px solid var(--purple-dark-shade);
+        border-radius: 5px;
+        color: var(--purple-dark-shade);
+        background-color: var(--beige-shade1);
+        box-shadow: 0px 2px 3px 0px var(--grey-shade);
+    }
+}
+
+
+/******************************************************************/
+/******************************************************************/
+/*styling the about page*/
+main .about {
+    background-color: rgb(203, 138, 183);
+    height: 90vh;
+}
+
+
+/*styling the skills page*/
+main .skills {
     background-color: rgb(65, 186, 17);
-    height: 50vh;
+    height: 90vh;
 }
 
-main .projects{
+/*styling the projects page*/
+main .projects {
     background-color: rgb(169, 217, 224);
-    height: 50vh;
+    height: 90vh;
 }
 
 
 /*styling contact information section*/
-main .contact{
+main .contact {
     background-color: rgb(131, 131, 30);
     height: 40vh;
 }
@@ -136,36 +286,42 @@ main .contact{
     height: 40px;
     margin: 0 10px;
     border-radius: 50%;
-    background-color: #3b5998; /* Facebook */
+    background-color: #3b5998;
+    /* Facebook */
     color: #fff;
     text-align: center;
     line-height: 40px;
     font-size: 20px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-  }
+}
 
-  /* Button hover effect */
-  .social-btn:hover {
-    background-color: #2a488e; /* Darker shade of Facebook color */
-  }
+/* Button hover effect */
+.social-btn:hover {
+    background-color: #2a488e;
+    /* Darker shade of Facebook color */
+}
 
-  /* Different social media buttons */
-  .facebook {
-    background-color: #3b5998; /* Facebook */
-  }
-  
-  .twitter {
-    background-color: #1da1f2; /* Twitter */
-  }
-  
-  .instagram {
-    background: linear-gradient(to right, #405de6, #5851db, #833ab4); /* Instagram */
-  }
-  
-  .linkedin {
-    background-color: #0077b5; /* LinkedIn */
-  }
+/* Different social media buttons */
+.facebook {
+    background-color: #3b5998;
+    /* Facebook */
+}
+
+.twitter {
+    background-color: #1da1f2;
+    /* Twitter */
+}
+
+.instagram {
+    background: linear-gradient(to right, #405de6, #5851db, #833ab4);
+    /* Instagram */
+}
+
+.linkedin {
+    background-color: #0077b5;
+    /* LinkedIn */
+}
 
 
 
