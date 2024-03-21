@@ -17,7 +17,9 @@
     <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="list.ico">
     <!--including font awesome v4 icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <!--including bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!--including google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,21 +37,16 @@
         <div class="logo">
             <a href="#home-page"> &lt;DOHA HMEID/&gt;</a>
         </div>
-        <nav>
+        <nav class="navbar">
             <ul>
                 <li><a href="#home-page" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about-page">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <!-- the up button -  redirects to home page -->
-    <div class="up-button">
-        <a href="#home-page"><i class="fas fa-arrow-up"></i></a>
-    </div>
 
 
     <!-- main includes the main pages for the website -->
@@ -58,72 +55,81 @@
         <!-- home page section -->
         <section class="home-page" id="home-page">
             <h1>DOHA HMEID</h1>
+
             <div class="description">
                 <h2>Computer Systems Engineer | Front-end Developer | Tech Enthusiast</h2>
                 <p>Passionate about innovation and lifelong learning</p>
             </div>
+
             <div class="buttons-container">
-                <button type="button" class="contact-btn" id="contact-btn" tabindex="2" onclick="ContactMe()">Contact
+                <button type="button" class="contact-btn" id="contact-btn" tabindex="2">Contact
                     Me</button>
                 <button type="button" class="cv-btn" id="cv-btn" tabindex="1" onclick="downloadCV()"> Download CV
                 </button>
             </div>
+
+            <!-- the up button -  redirects to home page -->
+            <button type="button" class="up-button">
+                <a href="#home-page"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                </a>
+            </button>
         </section>
 
-
         <!-- About section -->
-        <section class="about" id="about">
+        <section class="about-page" id="about-page">
             <h2>About Me</h2>
-            <img src="https://via.placeholder.com/150" alt="Doha Profile Picture">
-            <ul>
-                <li>
-                    <p>
-                        Greetings! I'm Doha Hmeid, a computer systems engineering graduate from Birzeit University,
-                        where I graduated with honors. Currently in my final semester, I'm diligently completing my
-                        remaining academic hours to officially receive my degree.
-                    </p>
-                </li>
-                <li>
-                    <p>In the previous semester, I successfully concluded my graduation project, crafting an Android
-                        mobile application tailored to enhance the experience of visitors navigating through the
-                        intricate landscape of Birzeit University. This innovative app seamlessly integrates dynamic
-                        mapping functionalities, virtual tours, and real-time guidance, ensuring users have a
-                        comprehensive and secure campus exploration.</p>
-                </li>
-                <li>
-                    <p>
-                        My journey into web development started when I stumbled upon a web development course ad while
-                        scrolling through Facebook in 2021. I decided to give it a shot and instantly fell in love with
-                        the process of translating code into tangible websites.
-                    </p>
-                </li>
-                <li>
-                    <p>Subsequently, when the time for my university's summer internship arrived, I decided to pursue
-                        training in front-end development. I enrolled in an intensive 2-month training program at EXALT
-                        Technologies, where I delved into HTML, CSS, JavaScript, and the React framework. It was
-                        exhilarating to see my skills evolve and solidify. This experience marked my first real training
-                        in the field, and I enjoyed it so much that I resolved to pursue a career in front-end
-                        development.
-                    </p>
-                </li>
-                <li>
-                    <p>Realizing the need for further training to delve into intricacies, best practices, and advanced
-                        topics in front-end development to enhance my readiness for the competitive job market, I
-                        enrolled in Foothill Technology Solutions’ training program. Currently, I am expanding my skills
-                        and gaining more hands-on experience in the field.</p>
-                </li>
-                <li>
-                    <p>To me, front-end development is more than just coding; it's an ever-evolving journey that demands
-                        creativity, adaptability, and a deep understanding of browser dynamics. I'm driven by the thrill
-                        of mastering this complex craft and shaping meaningful digital experiences.
-                    </p>
-                </li>
-                <li>
-                    <p>Looking towards the future fills me with excitement and anticipation. Each day brings new
-                        opportunities for learning, growth, and innovation. I am eager to embrace whatever surprises lie
-                        ahead, prepared to leave my mark in the ever-evolving tech universe.</p>
-                </li>
-            </ul>
+
+            <div class="img-container">
+                <img src="./images/doha/6.jpg" alt="Doha Profile Picture">
+            </div>
+
+            <article class="intro-article card">
+                <h3>Who is Doha?</h3>
+                <p>
+                    Greetings! I'm Doha Hmeid, a computer systems engineering graduate from Birzeit University,
+                    where I graduated with honors. Currently in my final semester, I'm diligently completing my
+                    remaining academic hours to officially receive my degree.
+                </p>
+
+                <p>In the previous semester, I successfully concluded my graduation project, crafting an Android
+                    mobile application tailored to enhance the experience of visitors navigating through the
+                    intricate landscape of Birzeit University. This innovative app seamlessly integrates dynamic
+                    mapping functionalities, virtual tours, and real-time guidance, ensuring users have a
+                    comprehensive and secure campus exploration.</p>
+            </article>
+
+            <article class="story-article card">
+                <h3>My Story!</h3>
+                <p>
+                    My journey into web development started when I stumbled upon a web development course ad while
+                    scrolling through Facebook in 2021. I decided to give it a shot and instantly fell in love with
+                    the process of translating code into tangible websites.
+                </p>
+
+                <p>Subsequently, when the time for my university's summer internship arrived, I decided to pursue
+                    training in front-end development. I enrolled in an intensive 2-month training program at EXALT
+                    Technologies, where I delved into HTML, CSS, JavaScript, and the React framework. It was
+                    exhilarating to see my skills evolve and solidify. This experience marked my first real training
+                    in the field, and I enjoyed it so much that I resolved to pursue a career in front-end
+                    development.
+                </p>
+
+                <p>Realizing the need for further training to delve into intricacies, best practices, and advanced
+                    topics in front-end development to enhance my readiness for the competitive job market, I
+                    enrolled in Foothill Technology Solutions' training program. Currently, I am expanding my skills
+                    and gaining more hands-on experience in the field.</p>
+            </article>
+
+            <article class="beliefs-article">
+                <p>To me, front-end development is more than just coding; it's an ever-evolving journey that demands
+                    creativity, adaptability, and a deep understanding of browser dynamics. I'm driven by the thrill
+                    of mastering this complex craft and shaping meaningful digital experiences.
+                </p>
+                <p>Looking towards the future fills me with excitement and anticipation. Each day brings new
+                    opportunities for learning, growth, and innovation. I am eager to embrace whatever surprises lie
+                    ahead, prepared to leave my mark in the ever-evolving tech universe.</p>
+            </article>
+
         </section>
 
 
@@ -175,38 +181,63 @@
 
         <!-- Contact info section -->
         <section class="contact" id="contact">
-            <h2>Contact Me</h2>
-            <form action="">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Message"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <h2>Get in touch</h2>
 
-            <ul class="social-btns">
-                <li>
-                    <a href="#" class="social-btn facebook" target="_blank" title="Facebook"><i
-                            class="fab fa-facebook-f"></i></a>
-                </li>
+            <div class="contact-container">
 
-                <li>
-                    <a href="#" class="social-btn twitter" target="_blank" title="Twitter"><i
-                            class="fab fa-twitter"></i></a>
-                </li>
+                <form class="" id="" role="form" action="">
+                    <div class="name-container column">
+                        <label for="name">FULL NAME</label>
+                        <input type="text" class="name" id="name" name="name" required />
+                    </div>
 
-                <li>
-                    <a href="#" class="social-btn instagram" target="_blank" title="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                </li>
+                    <div class="email-container column">
+                        <label for="email">EMAIL ADDRESS</label>
+                        <input type="email" class="email" id="email" name="email" required>
+                    </div>
 
-                <li>
-                    <a href="#" class="social-btn linkedin" target="_blank" title="LinkedIn"><i
-                            class="fab fa-linkedin-in"></i></a>
-                </li>
+                    <div class="subject-container column">
+                        <label for="name">SUBJECT</label>
+                        <input type="text" class="subject" id="subject" name="subject" required />
+                    </div>
 
-            </ul>
+                    <div class="message-container column">
+                        <label for="message">MESSAGE</label>
+                        <textarea class="message" rows="10" name="message" required></textarea>
+                    </div>
 
+                    <button type="submit" value="SEND">Send Message</button>
+                </form>
 
+                <ul class="social-btns">
+                  
+                    <li class="icon twitter">
+                        <span><i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </span>
+                        <span class="tooltip">linkedin</span>
+                    </li>
+                    <li class="icon github">
+                        <span class="tooltip">Github</span>
+                        <span><i class="fa fa-github" aria-hidden="true"></i>
+                        </span>
+                    </li>
+                    <li class="icon youtube">
+                        <span class="tooltip">linkedin</span>
+                        <span>
+                            <i class="bi bi-discord"></i>
+                        </span>
+                    </li>
+
+                    <li class="icon youtube">
+                        <span class="tooltip">linkedin</span>
+                        <span>
+                            <i class="bi bi-envelope"></i>
+                        </span>
+                    </li>
+
+                </ul>
+
+            </div>
         </section>
     </main>
 
