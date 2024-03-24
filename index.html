@@ -40,11 +40,11 @@
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="#home-page" class="active">Home</a></li>
+                <li><a href="#home-page">Home</a></li>
                 <li><a href="#about-page">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#skills-page">Skills</a></li>
+                <li><a href="#projects-page">Projects</a></li>
+                <li><a href="#contact-page">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -63,17 +63,12 @@
             </div>
 
             <div class="buttons-container">
-                <button type="button" class="contact-btn" id="contact-btn" tabindex="2">Contact
-                    Me</button>
-                <button type="button" class="cv-btn" id="cv-btn" tabindex="1" onclick="downloadCV()"> Download CV
-                </button>
+                <a href="#contact-page" class="contact-btn">Contact Me</a>
+                <a href="#home-page" class="cv-btn" download>Download CV</a>
             </div>
 
             <!-- the up button -  redirects to home page -->
-            <button type="button" class="up-button">
-                <a href="#home-page"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-                </a>
-            </button>
+            <a href="#home-page" class="up-button"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
         </section>
 
         <!-- About section -->
@@ -81,7 +76,7 @@
             <h2>About Me</h2>
 
             <div class="img-container">
-                <img src="./images/doha/6.jpg" alt="Doha Profile Picture">
+                <img src="assets/images/doha/doha.jpg" alt="Doha Profile Picture">
             </div>
 
             <article class="intro-article card">
@@ -130,11 +125,10 @@
                     opportunities for learning, growth, and innovation. I am eager to embrace whatever surprises lie
                     ahead, prepared to leave my mark in the ever-evolving tech universe.</p>
             </article>
-
         </section>
 
         <!-- skills section -->
-        <section class="skills" id="skills">
+        <section class="skills-page" id="skills-page">
             <h2>Skills & EXPERIENCE</h2>
 
             <ul class="EXPERIENCE">
@@ -175,7 +169,7 @@
         </section>
 
         <!-- projects section -->
-        <section class="projects" id="projects">
+        <section class="projects-page" id="projects-page">
             <h2> My Projects</h2>
             <ul>
                 <li>
@@ -209,7 +203,8 @@
                     </div>
                     <h3 class="project-title">Training Center System</h3>
                     <p class="project-text">
-                        An android mobile application that helps a training center in managing course offering, registration, and admission process.
+                        An android mobile application that helps a training center in managing course offering,
+                        registration, and admission process.
                     </p>
                     <a class="code-link" href="https://github.com/dohmeid/TrainingCenterProject"
                         target="_blank">View</a>
@@ -234,9 +229,8 @@
                     </div>
                     <h3 class="project-title">virtual memory simulation </h3>
                     <p class="project-text">
-                        The project illustrates the concept of virtual memory management in a simulation that includes
-                        several concepts of an Operating System like memory traces, Page Faults,
-                        Scheduling and page replacement Algorithms.
+                        The project illustrates concepts of virtual memory management. The simulation includes
+                        several concepts of an Operating System like memory traces, Page Faults, Scheduling, etc.
                     </p>
                     <a class="code-link" href="https://github.com/dohmeid/Virtual-Memory-Management-Simulation"
                         target="_blank">View</a>
@@ -245,63 +239,70 @@
         </section>
 
         <!-- Contact info section -->
-        <section class="contact" id="contact">
+        <section class="contact-page" id="contact-page">
             <h2>Get in touch</h2>
 
-            <div class="contact-container">
-
-                <form class="" id="" role="form" action="">
-                    <div class="name-container column">
+            <div class="contact-info-container">
+                <form role="form" action="mailto:doha.hmeid@gmail.com" method="post" enctype="text/plain">
+                    <div class="name-container">
                         <label for="name">FULL NAME</label>
-                        <input type="text" class="name" id="name" name="name" required />
+                        <input type="text" class="name" id="name" name="name" required tabindex="1" />
                     </div>
 
-                    <div class="email-container column">
+                    <div class="email-container">
                         <label for="email">EMAIL ADDRESS</label>
-                        <input type="email" class="email" id="email" name="email" required>
+                        <input type="email" class="email" id="email" name="email" required tabindex="2">
                     </div>
 
-                    <div class="subject-container column">
+                    <div class="subject-container">
                         <label for="name">SUBJECT</label>
-                        <input type="text" class="subject" id="subject" name="subject" required />
+                        <input type="text" class="subject" id="subject" name="subject" required tabindex="3" />
                     </div>
 
-                    <div class="message-container column">
+                    <div class="message-container">
                         <label for="message">MESSAGE</label>
-                        <textarea class="message" rows="10" name="message" required></textarea>
+                        <textarea class="message" rows="8" name="message" required tabindex="4"></textarea>
                     </div>
 
-                    <button type="submit" value="SEND">Send Message</button>
+                    <input type="submit" value="Send Message" tabindex="5">
+                    <input type="reset" value="Reset" tabindex="6">
                 </form>
 
-                <ul class="social-btns">
-
-                    <li class="icon twitter">
-                        <span><i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
-                        <span class="tooltip">linkedin</span>
+                <ul class="social-media">
+                    <li>
+                        <a href="https://www.linkedin.com/in/dohmeid/" target="_blank">
+                            <span class="tooltip">LinkedIn</span>
+                            <span><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                        </a>
                     </li>
-                    <li class="icon github">
-                        <span class="tooltip">Github</span>
-                        <span><i class="fa fa-github" aria-hidden="true"></i>
-                        </span>
+                    <li>
+                        <a href="https://github.com/dohmeid" target="_blank">
+                            <span class="tooltip">GitHub</span>
+                            <span><i class="fa fa-github" aria-hidden="true"></i></span>
+                        </a>
                     </li>
-                    <li class="icon youtube">
-                        <span class="tooltip">linkedin</span>
-                        <span>
-                            <i class="bi bi-discord"></i>
-                        </span>
+                    <li>
+                        <a href="https://discord.com/users/953030181692530729" target="_blank">
+                            <span class="tooltip">Discord</span>
+                            <span><i class="bi bi-discord"></i></span>
+                        </a>
                     </li>
-
-                    <li class="icon youtube">
-                        <span class="tooltip">linkedin</span>
-                        <span>
-                            <i class="bi bi-envelope"></i>
-                        </span>
-                    </li>
-
                 </ul>
 
+                <ul class="address">
+                    <li>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p>Ramallah, Palestine</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <p>doha.hmeid@gmail.com</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <p>+(970) 59-802-5104</p>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
@@ -310,17 +311,6 @@
         <small>Copyright &copy; 2024 Doha Hmeid. All Rights Reserved</small>
     </footer>
 
-    <script>
-        //function to handle search queries 
-        function downloadCV() {
-            document.getElementById("search").nodeValue;
-        }
-
-        //function to handle search queries 
-        function ContactMe() {
-            document.getElementById("search").nodeValue;
-        }
-    </script>
 </body>
 
 </html>
