@@ -36,19 +36,23 @@
     <!-- header, includes the navbar -->
     <header>
         <div class="logo">
-            <a href="#home-page"> &lt;DOHA HMEID/&gt;</a>
+            <a href="#home-page" aria-label="Go to home page" tabindex="0"> &lt;DOHA HMEID/&gt;</a>
         </div>
-        <nav class="navbar">
+        <nav>
+            <input type="checkbox" class="menu-toggle" id="menu-toggle" name="menu-toggle" value="nav menu toggle"
+                tabindex="1" />
+            <label class="menu-label" for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
             <ul>
-                <li><a href="#home-page">Home</a></li>
-                <li><a href="#about-page">About</a></li>
-                <li><a href="#skills-page">Skills</a></li>
-                <li><a href="#projects-page">Projects</a></li>
-                <li><a href="#contact-page">Contact</a></li>
+                <li><a href="#home-page" aria-label="Go to home page" tabindex="2">Home</a></li>
+                <li><a href="#about-page" aria-label="Go to about page" tabindex="3">About</a></li>
+                <li><a href="#skills-page" aria-label="Go to skills page" tabindex="4">Skills</a></li>
+                <li><a href="#projects-page" aria-label="Go to projects page" tabindex="5">Projects</a></li>
+                <li><a href="#contact-page" aria-label="Go to contact page" tabindex="6">Contact</a></li>
             </ul>
         </nav>
     </header>
-
 
     <!-- main includes the main pages for the website -->
     <main>
@@ -63,69 +67,46 @@
             </div>
 
             <div class="buttons-container">
-                <a href="#contact-page" class="contact-btn">Contact Me</a>
-                <a href="./assets/cv/Doha_Hmeid.pdf" class="cv-btn" download>Download CV</a>
+                <a href="#contact-page" class="contact-btn" aria-label="Go to contact page" tabindex="7">Contact Me</a>
+                <a href="./assets/cv/Doha_Hmeid.pdf" class="cv-btn" aria-label="Download CV" tabindex="8"
+                    download>Download CV</a>
             </div>
 
             <!-- the up button -  redirects to home page -->
-            <a href="#home-page" class="up-button"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+            <a href="#home-page" class="up-button" aria-label="Go to home page" tabindex="9"><i class="fa fa-arrow-up"
+                    aria-hidden="true"></i></a>
         </section>
 
 
         <!-- About section -->
         <section class="about-page" id="about-page">
-            <h2>About Me</h2>
-
             <div class="img-container">
                 <img src="assets/images/doha/doha.jpg" alt="Doha Profile Picture">
             </div>
 
-            <article class="intro-article card">
-                <h3>Who is Doha?</h3>
+            <article>
+                <h2>Who is Doha?</h2>
                 <p>
-                    Greetings! I'm Doha Hmeid, a computer systems engineering graduate from Birzeit University,
-                    where I graduated with honors. Currently in my final semester, I'm diligently completing my
-                    remaining academic hours to officially receive my degree.
+                    Greetings! I'm Doha Hmeid, a <span>computer-systems engineering graduate</span> from Birzeit
+                    University, where I
+                    graduated with honors. Currently in my final semester, I'm wrapping up my remaining academic hours
+                    to officially obtain my degree.
                 </p>
-
-                <p>In the previous semester, I successfully concluded my graduation project, crafting an Android
-                    mobile application tailored to enhance the experience of visitors navigating through the
-                    intricate landscape of Birzeit University. This innovative app seamlessly integrates dynamic
-                    mapping functionalities, virtual tours, and real-time guidance, ensuring users have a
-                    comprehensive and secure campus exploration.</p>
-            </article>
-
-            <article class="story-article card">
-                <h3>My Story!</h3>
                 <p>
-                    My journey into web development started when I stumbled upon a web development course ad while
-                    scrolling through Facebook in 2021. I decided to give it a shot and instantly fell in love with
-                    the process of translating code into tangible websites.
+                    Specializing in <span>Front-End Development</span>, I thrive on creating dynamic and
+                    high-performance web
+                    applications. Proficient in React.js, JavaScript, HTML5, and CSS, I transform design concepts into
+                    interactive digital experiences.
                 </p>
-
-                <p>Subsequently, when the time for my university's summer internship arrived, I decided to pursue
-                    training in front-end development. I enrolled in an intensive 2-month training program at EXALT
-                    Technologies, where I delved into HTML, CSS, JavaScript, and the React framework. It was
-                    exhilarating to see my skills evolve and solidify. This experience marked my first real training
-                    in the field, and I enjoyed it so much that I resolved to pursue a career in front-end
-                    development.
+                <p>
+                    Currently, I am enrolled in Foothill Technology Solutions' training program where I am expanding my
+                    Skills and gaining more hands-on experience in the field. Looking ahead, I'm eagerly anticipating
+                    the opportunities for learning, growth, and <span>innovation</span> that lie ahead in the
+                    ever-evolving tech
+                    industry.
                 </p>
-
-                <p>Realizing the need for further training to delve into intricacies, best practices, and advanced
-                    topics in front-end development to enhance my readiness for the competitive job market, I
-                    enrolled in Foothill Technology Solutions' training program. Currently, I am expanding my skills
-                    and gaining more hands-on experience in the field.</p>
             </article>
 
-            <article class="beliefs-article">
-                <p>To me, front-end development is more than just coding; it's an ever-evolving journey that demands
-                    creativity, adaptability, and a deep understanding of browser dynamics. I'm driven by the thrill
-                    of mastering this complex craft and shaping meaningful digital experiences.
-                </p>
-                <p>Looking towards the future fills me with excitement and anticipation. Each day brings new
-                    opportunities for learning, growth, and innovation. I am eager to embrace whatever surprises lie
-                    ahead, prepared to leave my mark in the ever-evolving tech universe.</p>
-            </article>
         </section>
 
 
