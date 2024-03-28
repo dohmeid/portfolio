@@ -21,6 +21,41 @@
     --secondary-font2: "Lato", sans-serif;
 }
 
+/*************************** custom animation ********************************/
+@keyframes color-glow {
+    0% {
+        color: var(--purple-light-shade1);
+        border-color: var(--purple-light-shade1);
+        box-shadow: 0 0 10px var(--purple-light-shade1);
+    }
+
+    50% {
+        color: var(--pink-light-shade2);
+        border-color: var(--pink-light-shade2);
+        box-shadow: 0 0 20px var(--pink-light-shade2);
+    }
+
+    100% {
+        color: var(--purple-dark-shade);
+        border-color: var(--purple-dark-shade);
+        box-shadow: 0 0 10px var(--purple-dark-shade);
+    }
+}
+
+@keyframes font-color {
+    0% {
+        color: var(--purple-light-shade1);
+    }
+
+    50% {
+        color: var(--pink-light-shade2);
+    }
+
+    100% {
+        color: var(--purple-dark-shade);
+    }
+}
+
 /*************************** general styles ********************************/
 * {
     margin: 0;
@@ -58,7 +93,7 @@ main {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: var(--main-font);
     color: var(--purple-dark-shade);
 }
@@ -291,6 +326,12 @@ main .about-page {
         & img {
             width: 25rem;
             border-radius: 15px;
+            box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+                transition: 0.3s;
+                box-shadow: 0 8px 16px 0 var(--purple-dark-shade);
+            }
         }
     }
 
@@ -298,12 +339,21 @@ main .about-page {
         width: 40rem;
 
         & h2 {
-            font-size: 2.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
             color: var(--purple-dark-shade);
-            font-family: var(--secondary-font2);
-            border-bottom: 10px solid var(--purple-dark-shade);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
+            border: 5px solid var(--purple-dark-shade);
+            padding: 1rem 0rem;
+            margin-bottom: 2rem;
+            animation: color-glow 3s infinite alternate;
+
+            &:hover {
+                /* Pauses animation on hover */
+                animation-play-state: paused;
+                cursor: pointer;
+            }
         }
 
         & p {
@@ -313,9 +363,8 @@ main .about-page {
             padding-bottom: 1rem;
         }
 
-        & span {
-            color: var(--pink-medium-shade2);
-            font-weight: 900;
+        & mark {
+            background-color: var(--pink-light-shade1);
         }
     }
 }
@@ -339,17 +388,15 @@ main .skills-page {
 
         & h2 {
             text-align: center;
-            font-size: 2.7rem;
-            color: var(--purple-dark-shade);
-            font-family: var(--secondary-font2);
             border-bottom: 10px solid var(--purple-dark-shade);
             padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
         }
 
         & img {
-            width: 18rem;
+            width: 15rem;
             border-radius: 15px;
+            border: 5px solid var(--purple-dark-shade);
         }
     }
 
@@ -396,9 +443,8 @@ main .projects-page {
 
     & h2 {
         text-align: center;
-        color: var(--purple-dark-shade);
-        font-family: var(--secondary-font2);
         padding-bottom: 0.5rem;
+        animation: font-color 2s infinite alternate;
     }
 
     & ul {
@@ -416,6 +462,7 @@ main .projects-page {
             padding: 1rem;
             background-color: white;
             border-radius: 5px;
+            border: 2px solid var(--pink-light-shade1);
             box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
             display: flex;
             flex-direction: column;
@@ -486,7 +533,6 @@ main .contact-page {
 
     & h2 {
         text-align: center;
-        font-size: 2.5rem;
     }
 
     & .contact-info-container {
@@ -594,6 +640,12 @@ main .contact-page {
             border-radius: 10px;
             padding: 2rem 1rem;
             color: var(--purple-dark-shade);
+            box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+                transition: 0.3s;
+                box-shadow: 0 8px 16px 0 var(--purple-dark-shade);
+            }
 
             & h3 {
                 font-size: 1.7rem;
@@ -704,7 +756,6 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
 
 
 /*********************************************************************************/
