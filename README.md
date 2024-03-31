@@ -6,7 +6,7 @@
 
 ## :dart: Key Features
 - Supports Web Accessibility
-- Responsive - supports all types of devices/screens including desktops, tablets, and mobile phone
+- Responsive - supports all types of devices/screens including desktops, tablets, and mobile phones
 - Includes Nav bar,Home page, About page, Skills page, Projects page, and Contact page 
 
 ## :space_invader: Tech Stack & Tools
