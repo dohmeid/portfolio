@@ -1,7 +1,7 @@
 <div align='center'>
-    <h1>Portfolio</h1>
+    <h1>:star2:	Portfolio :star2:</h1>
     <p>FTS-TASK3 - building personal portfolio</p>
-    <p>Portfolio website built using HTML5 & CSS3 as a part of FTS training plan</p>
+    <p>:dizzy:Portfolio website built using HTML5 & CSS3 as a part of FTS training plan :dizzy:</p>
 </div>
 
 ## :dart: Key Features
@@ -9,18 +9,15 @@
 - Responsive - supports all types of devices/screens including desktops, tablets, and mobile phone
 - includes Home page, About page, Skills page, Projects page, and Contact page 
 
-## :space_invader: Tech Stack
-* HTML5
-* CSS3
-* Git
-* GitHub
+## :space_invader: Tech Stack & Tools
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" height="25" />
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" height="25" />
+<img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" height="25"  />
+<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" height="25"  />
+<img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" height="25" />
+<img src="https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white" height="25"  />
 
-## Other tools used
-* Netlify for the website depolyment
-* Am I Responsive website for checking the website responsivity
-* font awsom
-
-## Website Preview 
+## :eye: Website Preview
 
 ## :art: Color Reference
 | Color | Hex |
