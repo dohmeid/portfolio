@@ -56,6 +56,12 @@
     }
 }
 
+@keyframes spin {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
 /*************************** general styles ********************************/
 * {
     margin: 0;
@@ -195,6 +201,7 @@ header {
     }
 }
 
+
 /*************************** home page style ********************************/
 main .home-page {
     padding-top: 10rem;
@@ -304,9 +311,9 @@ main .home-page {
         background: var(--purple-dark-shade);
 
         &:hover {
-            color: var(--green-shade);
+            color: var(--purple-light-shade1);
             background: var(--beige-shade);
-            box-shadow: 3px 3px 2px 2px var(--purple-dark-shade);
+            box-shadow: 3px 3px 2px 2px var(--purple-light-shade1);
             transition: 0.3s;
         }
     }
@@ -631,7 +638,7 @@ main .contact-page {
             }
         }
 
-        & address {
+        & article {
             width: 35rem;
             height: 100%;
             font-style: normal;
@@ -661,83 +668,102 @@ main .contact-page {
 
             & .info-list {
                 list-style: none;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 1rem;
 
                 & li {
+                    display: flex;
+                    margin-bottom: 1.5rem;
 
-                    & h4 {
-                        font-family: var(--secondary-font2);
+                    & span {
+                        display: block;
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 50%;
                         display: flex;
+                        justify-content: center;
                         align-items: center;
-                        text-align: center;
-                        font-size: 1.1rem;
+                        border: 2px dashed var(--purple-dark-shade);
+                        margin-right: 1rem;
+                        background: rgba(235, 228, 233, 0.507);
+                        animation: spin 15s linear infinite;
 
                         & i {
-                            width: 3rem;
-                            font-size: 1.4rem;
-                            margin-right: 0.5rem;
+                            font-size: 1.3rem;
+                            animation: spin 15s linear infinite reverse;
                         }
                     }
 
-                    & p {
-                        padding-left: 3.5rem;
+                    & .info-container {
+                        width: 10rem;
+
+                        & h4 {
+                            font-family: var(--secondary-font2);
+                            font-size: 1.1rem;
+                        }
                     }
                 }
             }
 
             & .social-media {
-                margin-top: 2rem;
+                margin-top: 3rem;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
                 list-style: none;
 
-                & li a {
-                    position: relative;
-                    background: var(--beige-shade);
-                    border-radius: 50%;
-                    width: 3rem;
-                    height: 3rem;
-                    font-size: 1.5rem;
-                    color: var(--purple-dark-shade);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    box-shadow: 0 10px 10px rgba(50, 16, 49, 0.416);
-                    cursor: pointer;
+                & li {
+                    margin-right: 1rem;
 
-                    & .tooltip {
-                        position: absolute;
-                        top: 0px;
-                        font-size: 0.8rem;
+                    a {
+                        position: relative;
                         background: var(--beige-shade);
+                        border-radius: 50%;
+                        width: 3rem;
+                        height: 3rem;
+                        font-size: 1.5rem;
                         color: var(--purple-dark-shade);
-                        padding: 5px 8px;
-                        border-radius: 5px;
-                        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-                        opacity: 0;
-                        pointer-events: none;
-                        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-                        /*the triangle pointer*/
-                        &::before {
-                            position: absolute;
-                            content: "";
-                            height: 0.5rem;
-                            width: 0.5rem;
-                            background: var(--beige-shade);
-                            bottom: -3px;
-                            left: 50%;
-                            transform: translate(-50%) rotate(45deg);
-                            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                        }
-                    }
-
-                    &:hover {
-                        box-shadow: 5px 15px 15px rgba(145, 32, 167, 0.812);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-shadow: 0 10px 10px rgba(50, 16, 49, 0.416);
+                        cursor: pointer;
 
                         & .tooltip {
-                            top: -2.5rem;
-                            opacity: 1;
-                            visibility: visible;
+                            position: absolute;
+                            top: 0px;
+                            font-size: 0.8rem;
+                            background: var(--beige-shade);
+                            color: var(--purple-dark-shade);
+                            padding: 5px 8px;
+                            border-radius: 5px;
+                            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                            opacity: 0;
+                            pointer-events: none;
+                            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+                            /*the triangle pointer*/
+                            &::before {
+                                position: absolute;
+                                content: "";
+                                height: 0.5rem;
+                                width: 0.5rem;
+                                background: var(--beige-shade);
+                                bottom: -3px;
+                                left: 50%;
+                                transform: translate(-50%) rotate(45deg);
+                                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                            }
+                        }
+
+                        &:hover {
+                            box-shadow: 5px 15px 15px rgba(145, 32, 167, 0.812);
+
+                            & .tooltip {
+                                top: -2.5rem;
+                                opacity: 1;
+                                visibility: visible;
+                            }
                         }
                     }
                 }
@@ -762,13 +788,13 @@ footer {
 /*************************** media queries styles ********************************/
 
 /*for small devices - mobile phones*/
-@media (max-width:767px) {
+@media (max-width:775px) {
     html {
         font-size: 12px;
     }
 
     header {
-        background-color: blue;
+        /*  background-color: blue;*/
         padding: 0 1.5rem;
 
         & nav {
@@ -914,7 +940,7 @@ footer {
             flex-wrap: wrap;
             margin-top: 1rem;
 
-            & address {
+            & article {
                 background-color: rgba(255, 255, 255, 0.6);
                 margin-top: 2rem;
 
@@ -929,13 +955,13 @@ footer {
 }
 
 /*for medium devices -  tablets*/
-@media (min-width: 767px) and (max-width: 1036px) {
+@media (min-width: 776px) and (max-width: 1036px) {
     html {
         font-size: 14px;
     }
 
     header {
-        background-color: tomato;
+        /*  background-color: tomato;*/
         padding: 0 1.5rem;
 
         & navbar {
@@ -1010,33 +1036,6 @@ footer {
 
             & form {
                 width: 25rem;
-            }
-
-            & address {
-                width: 25rem;
-
-                & .info-list {
-                    list-style: none;
-
-                    & li {
-                        & h4 {
-                            font-size: 1rem;
-
-                            & i {
-                                font-size: 1.5rem;
-                                margin-right: 0.5rem;
-                            }
-                        }
-
-                        & p {
-                            padding-left: 2.5rem;
-                        }
-                    }
-                }
-
-                & .social-media {
-                    margin-top: 1rem;
-                }
             }
         }
     }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Doha Hmeid | Front-end Developer</title>
@@ -35,15 +35,11 @@
 
     <!-- header, includes the navbar -->
     <header>
-        <div class="logo">
-            <a href="#home-page" aria-label="Go to home page" tabindex="0"> &lt;DOHA HMEID/&gt;</a>
-        </div>
+        <div class="logo"><a href="#home-page" aria-label="Go to home page" tabindex="0"> &lt;DOHA HMEID/&gt;</a></div>
         <nav>
             <input type="checkbox" class="menu-toggle" id="menu-toggle" name="menu-toggle" value="nav menu toggle"
-                tabindex="1" />
-            <label class="menu-label" for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
+                tabindex="1">
+            <label class="menu-label" for="menu-toggle"><span class='menu-button'></span></label>
             <ul>
                 <li><a href="#home-page" aria-label="Go to home page" tabindex="2">Home</a></li>
                 <li><a href="#about-page" aria-label="Go to about page" tabindex="3">About</a></li>
@@ -54,36 +50,30 @@
         </nav>
     </header>
 
+
     <!-- main includes the main pages for the website -->
     <main>
 
         <!-- home page section -->
         <section class="home-page" id="home-page">
             <h1>DOHA HMEID</h1>
-
             <div class="description">
                 <h2>Computer Systems Engineer | Front-end Developer | Tech Enthusiast</h2>
                 <p>Passionate about innovation and lifelong learning</p>
             </div>
-
             <div class="buttons-container">
                 <a href="#contact-page" class="contact-btn" aria-label="Go to contact page" tabindex="7">Contact Me</a>
                 <a href="./assets/cv/Doha_Hmeid.pdf" class="cv-btn" aria-label="Download CV" tabindex="8"
                     download>Download CV</a>
             </div>
-
             <!-- the up button -  redirects to home page -->
-            <a href="#home-page" class="up-button" aria-label="Go to home page" tabindex="9"><i class="fa fa-arrow-up"
-                    aria-hidden="true"></i></a>
+            <a href="#home-page" class="up-button" aria-label="Go to home page" tabindex="9">
+                <i class="fa fa-arrow-up" aria-hidden="true"></i></a>
         </section>
-
 
         <!-- About section -->
         <section class="about-page" id="about-page">
-            <div class="img-container">
-                <img src="assets/images/doha/doha.jpg" alt="Doha Profile Picture">
-            </div>
-
+            <div class="img-container"><img src="assets/images/doha/doha.jpg" alt="Doha Profile Picture"></div>
             <article>
                 <h2>Who is Doha?</h2>
                 <p>
@@ -99,24 +89,22 @@
                     interactive digital experiences.
                 </p>
                 <p>
-                    Currently, I am enrolled in Foothill Technology Solutions' training program where I am expanding my
+                    Currently, I am enrolled in <mark>Foothill Technology Solutions</mark> training program where I am
+                    expanding my
                     Skills and gaining more hands-on experience in the field. Looking ahead, I'm eagerly anticipating
                     the opportunities for learning, growth, and <mark>innovation</mark> that lie ahead in the
                     ever-evolving tech
                     industry.
                 </p>
             </article>
-
         </section>
-
 
         <!-- skills section -->
         <section class="skills-page" id="skills-page">
             <div>
                 <h2>Skills</h2>
-                <img src="assets/images/skills-page/pic4.gif" alt="laptop image - skills page">
+                <img src="assets/images/skills-page/laptop.gif" alt="laptop gif - skills page">
             </div>
-
             <ul>
                 <li>HTML</li>
                 <li>CSS</li>
@@ -144,7 +132,6 @@
             </ul>
         </section>
 
-
         <!-- projects section -->
         <section class="projects-page" id="projects-page">
             <h2> My Projects</h2>
@@ -159,7 +146,8 @@
                         generated.
                         The player has 8 chances for guessing the code.
                     </p>
-                    <a class="code-link" href="https://github.com/dohmeid/Task2" target="_blank">View</a>
+                    <a class="code-link" href="https://github.com/dohmeid/Task2" target="_blank"
+                        aria-label="Go to the project code of guess the secret code game" tabindex="10">View</a>
                 </li>
 
                 <li>
@@ -172,7 +160,8 @@
                         A website created using react to manage events. The user can add new events, edit curret events,
                         search through events list and sort them based on name and date.
                     </p>
-                    <a class="code-link" href="https://github.com/dohmeid/Task1" target="_blank">View</a>
+                    <a class="code-link" href="https://github.com/dohmeid/Task1" target="_blank"
+                        aria-label="Go to the project code of the events management system" tabindex="11">View</a>
                 </li>
 
                 <li>
@@ -185,8 +174,9 @@
                         An android mobile application that helps a training center in managing course offering,
                         registration, and admission process.
                     </p>
-                    <a class="code-link" href="https://github.com/dohmeid/TrainingCenterProject"
-                        target="_blank">View</a>
+                    <a class="code-link" href="https://github.com/dohmeid/TrainingCenterProject" target="_blank"
+                        aria-label="Go to the project code of the training center system android mobile app"
+                        tabindex="12">View</a>
                 </li>
 
                 <li>
@@ -199,8 +189,9 @@
                         A database system that provides a simple and effective way to manage blood donation operations.
                         Made using java and MySQL.
                     </p>
-                    <a class="code-link" href="https://github.com/dohmeid/Blood-Donation-System"
-                        target="_blank">View</a>
+                    <a class="code-link" href="https://github.com/dohmeid/Blood-Donation-System" target="_blank"
+                        aria-label="Go to the project code of the blood donation management system"
+                        tabindex="13">View</a>
                 </li>
 
                 <li>
@@ -213,8 +204,8 @@
                         This project develops a RISC multi-cycle processor using the Verilog hardware description
                         language and the active-HDL software tool. It implements five stages processor's architecture.
                     </p>
-                    <a class="code-link" href="https://github.com/dohmeid/multi-cycle-RISC-processor"
-                        target="_blank">View</a>
+                    <a class="code-link" href="https://github.com/dohmeid/multi-cycle-RISC-processor" target="_blank"
+                        aria-label="Go to the project code of the multi-cycle RISC processor" tabindex="14">View</a>
                 </li>
 
                 <li>
@@ -228,87 +219,113 @@
                         several concepts of an Operating System like memory traces, Page Faults, Scheduling, etc.
                     </p>
                     <a class="code-link" href="https://github.com/dohmeid/Virtual-Memory-Management-Simulation"
-                        target="_blank">View</a>
+                        target="_blank" aria-label="Go to the project code of the virtual memory simulation"
+                        tabindex="15">View</a>
                 </li>
             </ul>
         </section>
-
 
         <!-- Contact info section -->
         <section class="contact-page" id="contact-page">
             <h2>Get in touch</h2>
 
             <div class="contact-info-container">
-                <form role="form" action="mailto:doha.hmeid@gmail.com" method="post" enctype="text/plain">
+                <form action="mailto:doha.hmeid@gmail.com" method="post" enctype="text/plain">
                     <div class="name-container row">
                         <label for="name">FULL NAME</label>
-                        <input type="text" class="name" id="name" name="name" required tabindex="1" />
+                        <input type="text" class="name" id="name" name="name" required tabindex="16">
                     </div>
-
                     <div class="email-container row">
                         <label for="email">EMAIL ADDRESS</label>
-                        <input type="email" class="email" id="email" name="email" required tabindex="2">
+                        <input type="email" class="email" id="email" name="email" required tabindex="17">
                     </div>
-
                     <div class="subject-container row">
                         <label for="name">SUBJECT</label>
-                        <input type="text" class="subject" id="subject" name="subject" required tabindex="3" />
+                        <input type="text" class="subject" id="subject" name="subject" required tabindex="18">
                     </div>
-
                     <div class="message-container row">
                         <label for="message">MESSAGE</label>
-                        <textarea class="message" rows="8" name="message" required tabindex="4"></textarea>
+                        <textarea class="message" id="message" rows="8" name="message" required
+                            tabindex="19"></textarea>
                     </div>
-
-                    <input type="submit" value="Send Message" tabindex="5">
-                    <input type="reset" value="Reset" tabindex="6">
+                    <input type="submit" value="Send Message" tabindex="20">
+                    <input type="reset" value="Reset" tabindex="21">
                 </form>
 
-                <address>
+                <article>
                     <h3>Contact Info</h3>
                     <p> Hello there! If you have any questions, comments, or just want to connect, I'm all ears!
                         Feel free to contact me anytime, and I'll get back to you as soon as I can.
                     </p>
                     <ul class="info-list">
                         <li>
-                            <h4> <i class="fa fa-map-marker" aria-hidden="true"></i> Location</h4>
-                            <p>Ramallah, Palestine</p>
+                            <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <div class="info-container">
+                                <h4>Location</h4>
+                                <p>Ramallah, Palestine</p>
+                            </div>
                         </li>
                         <li>
-                            <h4> <i class="fa fa-envelope" aria-hidden="true"></i> Email</h4>
-                            <p>doha.hmeid@gmail.com</p>
+                            <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <div class="info-container">
+                                <h4>Email</h4>
+                                <p>doha.hmeid@gmail.com</p>
+                            </div>
                         </li>
                         <li>
-                            <h4> <i class="fa fa-phone" aria-hidden="true"></i> Mobile Number</h4>
-                            <p>+(970) 59-802-5104</p>
+                            <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <div class="info-container">
+                                <h4>Mobile Number</h4>
+                                <p>+(970) 59-802-5104</p>
+                            </div>
                         </li>
                         <li>
-                            <h4><i class="fa fa-globe" aria-hidden="true"></i> Languages</h4>
-                            <p>English + Arabic</p>
+                            <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                            <div class="info-container">
+                                <h4>Languages</h4>
+                                <p>English + Arabic</p>
+                            </div>
                         </li>
                     </ul>
-
                     <ul class="social-media">
                         <li>
-                            <a href="https://www.linkedin.com/in/dohmeid/" target="_blank">
+                            <a href="https://www.linkedin.com/in/dohmeid/" target="_blank" aria-label="Go to LinkedIn"
+                                tabindex="22">
                                 <span class="tooltip">LinkedIn</span>
                                 <span><i class="fa fa-linkedin" aria-hidden="true"></i></span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/dohmeid" target="_blank">
+                            <a href="https://github.com/dohmeid" target="_blank" aria-label="Go to GitHub"
+                                tabindex="23">
                                 <span class="tooltip">GitHub</span>
                                 <span><i class="fa fa-github" aria-hidden="true"></i></span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://discord.com/users/953030181692530729" target="_blank">
+                            <a href="https://discord.com/users/953030181692530729" target="_blank"
+                                aria-label="Go to discord" tabindex="24">
                                 <span class="tooltip">Discord</span>
                                 <span><i class="bi bi-discord"></i></span>
                             </a>
                         </li>
+                        <li>
+                            <a href="https://m.facebook.com/doha.hmeid?mibextid=LQQJ4d" target="_blank"
+                                aria-label="Go to Facebook" tabindex="25">
+                                <span class="tooltip">Facebook</span>
+                                <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fdohmeid%3Figsh%3DMXZqenQ1cjdoZTBkeg%253D%253D%26utm_source%3Dqr%26fbclid%3DIwAR3c_0CV_LJV0Xb89SpJiBJO8RhCNTap1WGd2ov5-pjfWOnczEVpY4IYGvw_aem_AecAmP1a34D67azO4mJuZOj9hCtPMJ9bKsBVgtlWJFu8JNGGy0dukjdN2pHz-NUoAkMKFSWGSOb1yOcppMHEjV3x&h=AT1dB4esRTe7Kwmz7t5QiT_HjwxsWnv1z73VB5MiHEhtS3hFTlnLaYvhLb9NrIxdoi0tgRTRSsk2Cy5aG7ruvHao6_7QyE8S7qvzWoTwCr7x2uMWslJ82y8gei2MpWGHfdJ5Ig"
+                                target="_blank" aria-label="Go to Instagram" tabindex="26">
+                                <span class="tooltip">Instagram</span>
+                                <span><i class="fa fa-instagram" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </li>
                     </ul>
-                </address>
+                </article>
             </div>
         </section>
     </main>
@@ -316,6 +333,7 @@
     <footer>
         <small>Copyright &copy; 2024 Doha Hmeid. All Rights Reserved</small>
     </footer>
+
 
 </body>
 
