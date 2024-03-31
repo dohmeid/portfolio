@@ -19,8 +19,6 @@
     <img src="https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white" height="30"  />
 </div>
 
-## :eye: Website Preview
-
 ## :art: Color Reference
 <div align="center"> 
     
@@ -32,6 +30,10 @@
 | Secondary Color3 | ![#e39bc4](https://via.placeholder.com/10/e39bc4?text=+) #e39bc4 |
 | Secondary Color4 | ![#fdf3edff](https://via.placeholder.com/10/fdf3edff?text=+) #fdf3edff |
 </div>
+
+## :eye: Website Preview
+![demo1](demo1.png)
+![demo2](demo2.png)
 
 ## :handshake: Contact
 Doha Hmeid --
