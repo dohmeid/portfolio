@@ -33,7 +33,6 @@
 
 ## :eye: Website Preview
 ![demo1](demo1.png)
-https://dohmeid.netlify.app/ 
 ![demo2](demo2.png)
 
 ## :handshake: Contact
