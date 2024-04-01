@@ -1,13 +1,20 @@
 <div align='center'>
     <h1>:star2:	Portfolio :star2:</h1>
-    <p>FTS-TASK3 - building personal portfolio</p>
-    <p>:dizzy:Portfolio website built using HTML5 & CSS3 as a part of FTS training plan :dizzy:</p>
 </div>
+<h2>FTS-TASK3 - Building Personal Portfolio</h2>
+<p>This repository contains a personal portfolio website built using HTML5 & CSS3 as a part of FTS training plan :dizzy:</p>
 
 ## :dart: Key Features
-- Supports Web Accessibility
-- Responsive - supports all types of devices/screens including desktops, tablets, and mobile phones
-- Includes Nav bar, Home page, About page, Skills page, Projects page, and Contact page 
+- **Supports Web Accessibility**: The portfolio is designed to be accessible to users with disabilities, following best practices for web accessibility.
+- **Responsive Design**: The portfolio is responsive and adapts to all types of devices/screens, including desktops, tablets, and mobile phones.
+- **Pages Included**:
+  - **Nav Bar**: Navigation bar for easy navigation throughout the portfolio.
+  - **Home Page**: Introduces the user to the portfolio and provides an overview.
+  - **About Page**: Provides information about the owner of the portfolio.
+  - **Skills Page**: Showcases the skills and expertise of the owner.
+  - **Projects Page**: Highlights various projects undertaken by the owner.
+  - **Contact Page**: Provides contact information and a way for visitors to get in touch.
+
 
 ## :space_invader: Tech Stack & Tools Used
 <div align="center">
