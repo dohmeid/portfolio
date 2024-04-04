@@ -33,18 +33,21 @@
 
 <body>
     <!-- Splash Screen -->
+    <!--
     <div class="splash"></div>
     <div class="bouncing-ball z-depth-4"></div>
+    -->
 
     <!-- header, includes the navbar -->
-    <header>
-        <div class="logo"><a href="#home-page" aria-label="Go to home page" tabindex="0"> &lt;DOHA HMEID/&gt;</a></div>
+    <header id="nav-header">
+        <div class="logo"><a id="logo" href="#home-page" aria-label="Go to home page" tabindex="0"> &lt;DOHA
+                HMEID/&gt;</a></div>
         <nav>
             <input type="checkbox" class="menu-toggle" id="menu-toggle" name="menu-toggle" value="nav menu toggle"
                 tabindex="1">
             <label class="menu-label" for="menu-toggle"><span class='menu-button'></span></label>
             <ul>
-                <li><a href="#home-page" aria-label="Go to home page" tabindex="2">Home</a></li>
+                <li><a href="#home-page" class="current-page" aria-label="Go to home page" tabindex="2">Home</a></li>
                 <li><a href="#about-page" aria-label="Go to about page" tabindex="3">About</a></li>
                 <li><a href="#skills-page" aria-label="Go to skills page" tabindex="4">Skills</a></li>
                 <li><a href="#projects-page" aria-label="Go to projects page" tabindex="5">Projects</a></li>
@@ -52,7 +55,6 @@
             </ul>
         </nav>
     </header>
-
 
     <!-- main includes the main pages for the website -->
     <main>
@@ -245,7 +247,7 @@
                         <input type="email" class="email" id="email" name="email" required tabindex="17">
                     </div>
                     <div class="subject-container row">
-                        <label for="name">SUBJECT</label>
+                        <label for="subject">SUBJECT</label>
                         <input type="text" class="subject" id="subject" name="subject" required tabindex="18">
                     </div>
                     <div class="message-container row">
@@ -322,8 +324,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fdohmeid%3Figsh%3DMXZqenQ1cjdoZTBkeg%253D%253D%26utm_source%3Dqr%26fbclid%3DIwAR3c_0CV_LJV0Xb89SpJiBJO8RhCNTap1WGd2ov5-pjfWOnczEVpY4IYGvw_aem_AecAmP1a34D67azO4mJuZOj9hCtPMJ9bKsBVgtlWJFu8JNGGy0dukjdN2pHz-NUoAkMKFSWGSOb1yOcppMHEjV3x&h=AT1dB4esRTe7Kwmz7t5QiT_HjwxsWnv1z73VB5MiHEhtS3hFTlnLaYvhLb9NrIxdoi0tgRTRSsk2Cy5aG7ruvHao6_7QyE8S7qvzWoTwCr7x2uMWslJ82y8gei2MpWGHfdJ5Ig"
-                                target="_blank" aria-label="Go to Instagram" tabindex="26">
+                            <a href="https://www.instagram.com/dohmeid/" target="_blank" aria-label="Go to Instagram"
+                                tabindex="26">
                                 <span class="tooltip">Instagram</span>
                                 <span><i class="fa fa-instagram" aria-hidden="true"></i>
                                 </span>
@@ -338,6 +340,55 @@
     <footer>
         <small>Copyright &copy; 2024 Doha Hmeid. All Rights Reserved</small>
     </footer>
+
+
+    <script type="text/javascript">
+
+
+        // When the user scrolls down 80px from the top of the document, make the navbar colored, otherwise, keep it transparent
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('nav-header');
+            const logo = document.getElementById("logo");
+            var navLinks = document.querySelectorAll("nav a");
+            if (window.scrollY > window.innerHeight - 150) { // Change 50 to the desired scroll position
+                navbar.style.backgroundColor = '#614e6c'; // Change color when scrolled
+                logo.style.color = '#FEF9FF';
+                navLinks.forEach(function (link) {
+                    if (link.classList.contains("current-page")) {
+                        link.style.color = '#614e6c';
+                    }
+                    else {
+                        link.style.color = '#FEF9FF';
+                    }
+
+                    link.addEventListener("mouseover", function () {
+                        link.style.color = '#614e6c';
+                    });
+                    link.addEventListener("mouseout", function () {
+                        if (link.classList.contains("current-page")) {
+                            link.style.color = '#614e6c';
+                        }
+                        else {
+                            link.style.color = '#FEF9FF';
+                        }
+                    });
+
+                });
+            } else {
+                navbar.style.backgroundColor = 'transparent'; // Set back to transparent
+                logo.style.color = '#614e6c';
+                navLinks.forEach(function (link) {
+                    link.style.color = '#614e6c';
+                    link.addEventListener("mouseout", function () {
+                        link.style.color = '#614e6c';
+                    });
+                });
+            }
+        });
+
+
+
+    </script>
 
 </body>
 

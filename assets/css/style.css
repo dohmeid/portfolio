@@ -3,14 +3,14 @@
     /*the website's color palette */
     --purple-light-shade1: #b8a7cbff;
     --purple-light-shade2: #b089be;
-    --purple-dark-shade: #402b3a;
+    --purple-dark-shade: #614e6c;
 
     --pink-light-shade1: #fbd7e1;
     --pink-light-shade2: #e39bc4;
     --pink-medium-shade1: #e7709c;
     --pink-medium-shade2: #bc518c;
 
-    --beige-shade: #fdf3edff;
+    --beige-shade: rgb(254, 249, 255);
 
     /*font combinations*/
     --main-font: "Oswald", sans-serif;
@@ -23,19 +23,17 @@
     0% {
         color: var(--purple-light-shade1);
         border-color: var(--purple-light-shade1);
-        box-shadow: 0 0 10px var(--purple-light-shade1);
+
     }
 
     50% {
         color: var(--pink-light-shade2);
         border-color: var(--pink-light-shade2);
-        box-shadow: 0 0 20px var(--pink-light-shade2);
     }
 
     100% {
         color: var(--purple-dark-shade);
         border-color: var(--purple-dark-shade);
-        box-shadow: 0 0 10px var(--purple-dark-shade);
     }
 }
 
@@ -101,159 +99,24 @@ h2 {
     color: var(--purple-dark-shade);
 }
 
-/*************************** splash screen style ********************************/
-/* start welcome animation */
-
-.splash {
-    border: 100em solid var(--pink-light-shade1);
-    position: fixed;
-    display: block;
-    box-sizing: initial;
-    transform: translate(-50%, -50%);
-    animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
-}
-
-@keyframes puff {
-    0% {
-        top: 100%;
-        height: 0px;
-        padding: 0px;
-    }
-
-    100% {
-        top: 50%;
-        height: 100%;
-        padding: 0px 100%;
-    }
-}
-
-@keyframes borderRadius {
-    0% {
-        border-radius: 50%;
-    }
-
-    100% {
-        border-radius: 0px;
-    }
-}
-
-.bouncing-ball {
-    background: var(--purple-dark-shade);
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    left: 50%;
-    top: 0%;
-    opacity: 0;
-    border-radius: 50%;
-    animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards,
-        moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards,
-        moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
-        materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards,
-        hide 2s 2.9s ease forwards;
-}
-
-@keyframes init {
-    0% {
-        width: 0px;
-        height: 0px;
-    }
-
-    100% {
-        width: 50px;
-        height: 50px;
-        margin-top: 0px;
-        opacity: 1;
-    }
-}
-
-@keyframes moveDown {
-    0% {
-        top: 0%;
-    }
-
-    50% {
-        top: 40%;
-    }
-
-    100% {
-        top: 80%;
-    }
-}
-
-@keyframes moveUp {
-    0% {
-        background: var(--purple-dark-shade);
-        top: 80%;
-    }
-
-    50% {
-        top: 40%;
-    }
-
-    100% {
-        top: 50%;
-        background: var(--pink-medium-shade2);
-    }
-}
-
-@keyframes materia {
-    0% {
-        background: var(--pink-light-shade1);
-    }
-
-    50% {
-        background: var(--pink-light-shade2);
-    }
-
-    100% {
-        background: var(--pink-medium-shade1);
-        width: 100%;
-        height: 3.5rem;
-        border-radius: 0px;
-        top: 0;
-        left:0;
-    }
-}
-
-@keyframes moveIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes hide {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-
 /*************************** header style ********************************/
 header {
-    font-family: var(--secondary-font1);
+    font-family: var(--secondary-font2);
     position: fixed;
     z-index: 1000;
     top: 0;
+    left: 0;
     width: 100%;
-    height: 3.5rem;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    opacity: 0.8;
     padding: 0px 3rem;
-    background-color: var(--purple-dark-shade);
+    opacity: 0.8;
+    transition: background-color 0.4s linear;
 
     & a {
-        color: var(--beige-shade);
+        color: var(--purple-dark-shade);
         text-decoration: none;
     }
 
@@ -267,7 +130,7 @@ header {
     }
 
     & nav {
-        width: 25rem;
+        width: 26vw;
 
         & ul {
             display: flex;
@@ -275,7 +138,8 @@ header {
             list-style: none;
 
             & li a {
-                padding: 0.3rem;
+                border-radius: 20px;
+                padding: 0.5rem;
                 box-shadow: inset 0 0 0 0 var(--beige-shade);
                 transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
@@ -284,6 +148,11 @@ header {
                     box-shadow: inset 100px 0 0 0 var(--beige-shade);
                     transition: 0.5s;
                 }
+            }
+
+            & li .current-page{
+                color: var(--purple-dark-shade);
+                box-shadow: inset 100px 0 0 0 var(--beige-shade);
             }
         }
 
@@ -335,31 +204,30 @@ header {
 
 /*************************** home page style ********************************/
 main .home-page {
-    padding-top: 10rem;
+    padding-top: 6rem;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to right,
-            rgba(254, 242, 255, 0.5),
-            rgba(114, 27, 129, 0.175)),
-        url("../images/backgrounds/home-page-background.gif");
-    background-position: center center;
+    background-image: url("../images/backgrounds/home-page-background.gif");
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+    border-bottom: 10px solid var(--pink-light-shade1);
 
     & h1 {
-        font-size: 3rem;
+        font-size: 5rem;
         letter-spacing: 1rem;
         font-family: var(--main-font);
-        color: var(--purple-dark-shade);
-        text-shadow: 5px 3px 0px var(--beige-shade);
-        box-sizing: border-box;
+        color: var(--purple-light-shade1);
+        text-shadow: 4px 2px 0px var(--purple-dark-shade);
 
         &:hover {
             color: var(--purple-light-shade1);
-            box-shadow: inset 25rem 0 0 0 var(--beige-shade);
+            box-shadow: inset 40rem 0 0 0 var(--beige-shade);
             transition: 1s;
         }
     }
@@ -368,12 +236,12 @@ main .home-page {
         text-align: center;
         border-top: 2px solid var(--purple-dark-shade);
         padding-top: 1.5rem;
-        font-family: var(--secondary-font2);
+        font-family: var(--secondary-font1);
 
         & h2 {
-            font-size: 1.2rem;
-            word-spacing: 0.4rem;
+            font-size: 1.5rem;
             padding-bottom: 0.3rem;
+            font-family: var(--secondary-font2);
         }
     }
 
@@ -392,7 +260,7 @@ main .home-page {
             font-family: var(--secondary-font2);
             font-size: 0.7rem;
             letter-spacing: 0.1rem;
-            border-radius: 5px;
+            border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -454,6 +322,7 @@ main .home-page {
 /*************************** about page style ********************************/
 main .about-page {
     height: 95vh;
+    width: 100vw;
     padding: 1rem 3rem;
     display: flex;
     align-items: center;
@@ -463,9 +332,8 @@ main .about-page {
         margin-right: 3rem;
 
         & img {
-            width: 25rem;
+            width: 25vw;
             border-radius: 15px;
-            box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 
             &:hover {
                 transition: 0.3s;
@@ -475,7 +343,7 @@ main .about-page {
     }
 
     & article {
-        width: 40rem;
+        width: 40vw;
 
         & h2 {
             display: flex;
@@ -484,6 +352,7 @@ main .about-page {
             font-size: 2.5rem;
             color: var(--purple-dark-shade);
             border: 5px solid var(--purple-dark-shade);
+            border-radius: 15px;
             padding: 1rem 0rem;
             margin-bottom: 2rem;
             animation: color-glow 3s infinite alternate;
@@ -603,7 +472,7 @@ main .projects-page {
             margin: 1rem;
             padding: 1rem;
             background-color: white;
-            border-radius: 5px;
+            border-radius: 15px;
             border: 2px solid var(--pink-light-shade1);
             box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
             display: flex;
