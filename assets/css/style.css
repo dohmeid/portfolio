@@ -406,6 +406,11 @@ main .skills-page {
     justify-items: center;
     align-items: center;
     row-gap: 2rem;
+    border-top-right-radius: 25%;
+    border-bottom-left-radius: 25%;
+    border-top: 10px solid var(--pink-light-shade1);
+    border-bottom: 10px solid var(--pink-light-shade1);
+
 
     & h2 {
         grid-area: 1 / 1 / 2 / 3;
@@ -423,7 +428,7 @@ main .skills-page {
         grid-area: 3 / 1 / 4 / 2;
 
         & img {
-            width: 15rem;
+            width: 15vw;
             border-radius: 15px;
             border: 5px solid var(--purple-dark-shade);
         }
@@ -439,11 +444,12 @@ main .skills-page {
         align-items: center;
 
         & li {
-            width: 10rem;
-            height: 3.5rem;
+            width: 12rem;
+            height: 4rem;
             margin: 0.5rem;
             font-family: var(--secondary-font1);
             font-weight: 500;
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -455,6 +461,11 @@ main .skills-page {
             background-image: linear-gradient(to right, var(--pink-light-shade2) 0%,
                     var(--purple-light-shade1) 31%, var(--pink-light-shade1) 90%);
             transition: all .5s ease;
+
+            & i {
+                font-size: 1.8rem;
+                padding-right: 0.5rem;
+            }
 
             &:hover {
                 cursor: pointer;
@@ -824,12 +835,12 @@ main .contact-page {
 
 /*************************** footer style ********************************/
 footer {
+    width: 100vw;
     height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     font-family: var(--secondary-font1);
     color: var(--beige-shade);
     background-color: var(--purple-dark-shade);
