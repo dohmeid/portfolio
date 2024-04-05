@@ -76,16 +76,24 @@ body {
 
     /*customizing the scroll bar appearance*/
     &::-webkit-scrollbar {
-        width: 14px;
+        width: 12px;
     }
 
     &::-webkit-scrollbar-track {
-        background: var(--beige-shade);
+        background: var(--pink-light-shade1);
+        border-radius: 25px;
     }
 
     &::-webkit-scrollbar-thumb {
         background: var(--purple-dark-shade);
-        border-radius: 2px;
+        border-radius: 25px;
+        border: 1px solid #fbd7e1;
+    }
+
+    @supports not selector(::-webkit-scrollbar) {
+        body {
+            scrollbar-color: var(--purple-dark-shade) var(--pink-light-shade1);
+        }
     }
 }
 
