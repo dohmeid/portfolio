@@ -89,8 +89,12 @@ body {
     }
 }
 
+
 main {
-    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
@@ -150,7 +154,7 @@ header {
                 }
             }
 
-            & li .current-page{
+            & li .current-page {
                 color: var(--purple-dark-shade);
                 box-shadow: inset 100px 0 0 0 var(--beige-shade);
             }
@@ -206,6 +210,7 @@ header {
 main .home-page {
     padding-top: 6rem;
     height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -305,15 +310,15 @@ main .home-page {
         right: 20px;
         padding: 0.6rem 0.8rem;
         font-size: 20px;
-        border-radius: 5px;
-        border: 2px solid var(--beige-shade);
-        color: var(--beige-shade);
-        background: var(--purple-dark-shade);
+        border-radius: 50%;
+        border: 2px solid var(--purple-dark-shade);
+        color: var(--purple-dark-shade);
+        background: var(--beige-shade);
 
         &:hover {
-            color: var(--purple-light-shade1);
-            background: var(--beige-shade);
-            box-shadow: 3px 3px 2px 2px var(--purple-light-shade1);
+            color: var(--pink-light-shade2);
+            border: 2px solid var(--pink-light-shade1);
+            box-shadow: 3px 3px 2px 2px var(--pink-light-shade2);
             transition: 0.3s;
         }
     }
@@ -321,12 +326,17 @@ main .home-page {
 
 /*************************** about page style ********************************/
 main .about-page {
-    height: 95vh;
-    width: 100vw;
-    padding: 1rem 3rem;
+    width: 75vw;
+    height: 75vh;
+    margin: 10rem 10rem;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.6);
 
     & .img-container {
         margin-right: 3rem;
@@ -334,6 +344,7 @@ main .about-page {
         & img {
             width: 25vw;
             border-radius: 15px;
+            border: 3px solid var(--pink-light-shade2);
 
             &:hover {
                 transition: 0.3s;
@@ -343,7 +354,6 @@ main .about-page {
     }
 
     & article {
-        width: 40vw;
 
         & h2 {
             display: flex;
@@ -540,37 +550,55 @@ main .projects-page {
 
 /*************************** contact page style ********************************/
 main .contact-page {
-    padding: 3rem 2rem;
+    width: 100vw;
+    padding: 4rem 2rem;
     background-image: url("../images/backgrounds/contact-page-background.gif");
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-top-left-radius: 25%;
+    border-top: 10px solid var(--pink-light-shade1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     & h2 {
-        text-align: center;
+        color: var(--pink-light-shade1);
     }
 
     & .contact-info-container {
+        margin-top: 3rem;
+        width: 70vw;
+        height: 70vh;
+        padding: 2rem;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
-        margin-top: 3rem;
-        height: 30rem;
+        justify-content: center;
+        justify-content: space-between;
+        border-radius: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        background: rgba(255, 255, 255, 0.65);
+        box-shadow: 4px 4px 8px 2px var(--purple-dark-shade);
+
+        &:hover {
+            transition: 0.3s;
+            box-shadow: 8px 8px 16px 8px var(--purple-dark-shade);
+        }
 
         & form {
             height: 100%;
-            width: 35rem;
+            width: 48%;
+            padding: 2rem 1rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
-            /* Adjust as needed */
+            grid-template-columns: repeat(auto-fit, minmax(3vw, 1fr));
             grid-template-rows: auto;
             grid-row-gap: 0.5rem;
             grid-column-gap: 1rem;
             justify-content: center;
-            background-color: var(--pink-light-shade1);
+            border-radius: 15px;
             border: 1px solid var(--pink-light-shade2);
-            border-radius: 10px;
-            padding: 2rem 1rem;
+            background-color: var(--pink-light-shade1);
             box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
 
             &:hover {
@@ -626,18 +654,30 @@ main .contact-page {
 
             & input[type="reset"],
             input[type="submit"] {
-                font-size: 0.9rem;
-                height: 3rem;
+                height: 6vh;
                 cursor: pointer;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: bolder;
+                font-family: var(--secondary-font2);
+                font-size: 0.7rem;
+                letter-spacing: 0.1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 border: none;
                 border-radius: 5px;
                 color: var(--beige-shade);
-                background: var(--purple-dark-shade);
+                background-color: var(--purple-dark-shade);
 
                 &:hover {
-                    transition: 0.3s;
-                    transform: translateY(7px);
-                    box-shadow: 5px 10px 10px rgba(145, 32, 167, 0.3);
+                    transition: 0.4s;
+                    transform: translateY(2px);
+                    color: var(--beige-shade);
+                    background-color: var(--purple-light-shade1);
+                    border: 2px solid var(--beige-shade);
+                    box-shadow: 5px 5px 10px 5px var(--purple-dark-shade);
                 }
 
                 &:focus {
@@ -648,20 +688,12 @@ main .contact-page {
         }
 
         & article {
-            width: 35rem;
             height: 100%;
+            width: 48%;
             font-style: normal;
             font-family: var(--secondary-font1);
-            background-color: rgba(255, 255, 255, 0.4);
-            border-radius: 10px;
-            padding: 2rem;
+            padding-top: 2rem;
             color: var(--purple-dark-shade);
-            box-shadow: 1px 4px 8px 1px rgba(0, 0, 0, 0.2);
-
-            &:hover {
-                transition: 0.3s;
-                box-shadow: 0 8px 16px 0 var(--purple-dark-shade);
-            }
 
             & h3 {
                 font-size: 1.6rem;
@@ -694,8 +726,8 @@ main .contact-page {
                         justify-content: center;
                         align-items: center;
                         border: 2px dashed var(--purple-dark-shade);
+                        background: var(--beige-shade);
                         margin-right: 1rem;
-                        background: rgba(235, 228, 233, 0.507);
                         animation: spin 15s linear infinite;
 
                         & i {
@@ -705,7 +737,7 @@ main .contact-page {
                     }
 
                     & .info-container {
-                        width: 10rem;
+                        width: 10vw;
 
                         & h4 {
                             font-family: var(--secondary-font2);
@@ -766,7 +798,7 @@ main .contact-page {
                         }
 
                         &:hover {
-                            box-shadow: 5px 15px 15px rgba(145, 32, 167, 0.812);
+                            box-shadow: 5px 15px 15px var(--pink-light-shade2);
 
                             & .tooltip {
                                 top: -2.5rem;
@@ -784,12 +816,15 @@ main .contact-page {
 
 /*************************** footer style ********************************/
 footer {
-    background-color: var(--purple-dark-shade);
-    height: 4rem;
-    color: var(--beige-shade);
+    height: 10vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    font-family: var(--secondary-font1);
+    color: var(--beige-shade);
+    background-color: var(--purple-dark-shade);
 }
 
 
