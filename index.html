@@ -80,6 +80,8 @@
         <span></span>
     </div>
 
+    <div class="cursor-circle"></div>
+
     <!-- main includes the main pages for the website -->
     <main>
 
@@ -87,7 +89,7 @@
         <section class="home-page" id="home-page">
             <h1>DOHA HMEID</h1>
             <div class="description">
-                <h2>Computer Systems Engineer | Front-end Developer | Tech Enthusiast</h2>
+                <h2>Computer Systems Engineer &nbsp;|&nbsp; Front-end Developer &nbsp;|&nbsp; Tech Enthusiast</h2>
                 <p>Passionate about innovation and lifelong learning</p>
             </div>
             <div class="buttons-container">
@@ -102,46 +104,45 @@
 
         <!-- About section -->
         <section class="about-page" id="about-page">
-
-            <div class="img-container"><img src="assets/images/doha/doha2.jpg" alt="Doha Profile Picture"></div>
-            <article>
-                <h2>Who is Doha?</h2>
-                <p>
-                    Greetings! I'm Doha Hmeid, a <mark>computer-systems engineering graduate</mark> from Birzeit
-                    University, where I
-                    graduated with honors. Currently in my final semester, I'm wrapping up my remaining academic
-                    hours
-                    to officially obtain my degree.
-                </p>
-                <p>
-                    Specializing in <mark>Front-End Development</mark>, I thrive on creating dynamic and
-                    high-performance web
-                    applications. Proficient in React.js, JavaScript, HTML5, and CSS, I transform design concepts
-                    into
-                    interactive digital experiences.
-                </p>
-                <p>
-                    Currently, I am enrolled in <mark>Foothill Technology Solutions</mark> training program where I
-                    am
-                    expanding my
-                    Skills and gaining more hands-on experience in the field. Looking ahead, I'm eagerly
-                    anticipating
-                    the opportunities for learning, growth, and <mark>innovation</mark> that lie ahead in the
-                    ever-evolving tech
-                    industry.
-                </p>
-            </article>
-
+            <div class="border-div">
+                <div class="img-container"><img src="assets/images/doha/doha2.jpg" alt="Doha Profile Picture"></div>
+                <article>
+                    <h2>Who is Doha?</h2>
+                    <p>
+                        Greetings! I'm Doha Hmeid, a <mark>computer-systems engineering graduate</mark> from Birzeit
+                        University, where I
+                        graduated with honors. Currently in my final semester, I'm wrapping up my remaining academic
+                        hours
+                        to officially obtain my degree.
+                    </p>
+                    <p>
+                        Specializing in <mark>Front-End Development</mark>, I thrive on creating dynamic and
+                        high-performance web
+                        applications. Proficient in React.js, JavaScript, HTML5, and CSS, I transform design concepts
+                        into
+                        interactive digital experiences.
+                    </p>
+                    <p>
+                        Currently, I am enrolled in <mark>Foothill Technology Solutions</mark> training program where I
+                        am
+                        expanding my
+                        Skills and gaining more hands-on experience in the field. Looking ahead, I'm eagerly
+                        anticipating
+                        the opportunities for learning, growth, and <mark>innovation</mark> that lie ahead in the
+                        ever-evolving tech
+                        industry.
+                    </p>
+                </article>
+            </div>
         </section>
 
         <!-- skills section -->
         <section class="skills-page" id="skills-page">
-            <h2>Skills</h2>
-            <h3>Below are some of the skills I've developed during my university studies and software development
+            <h2><i class="fa fa-star-o" aria-hidden="true"></i>Skills<i class="fa fa-star-o" aria-hidden="true"></i>
+            </h2>
+            <h3>
+                Below are some of the skills I've developed during my university studies and software development
                 journey.</h3>
-            <div>
-                <img src="assets/images/skills-page/laptop.gif" alt="laptop gif - skills page">
-            </div>
             <ul>
                 <li><i class="fa fa-html5" aria-hidden="true"></i>HTML</li>
                 <li><i class="devicon-css3-plain"></i>CSS</li>
@@ -171,12 +172,16 @@
         <!-- projects section -->
         <section class="projects-page" id="projects-page">
             <h2> My Projects</h2>
-            <ul>
-                <li>
-                    <div class="img-container">
-                        <img src="assets/images/projects/secret-code-game.png" alt="guess the secret code game project">
-                    </div>
+            <ul class="projects">
+                <li class="project">
+                    <img src="assets/images/projects/secret-code-game.png" alt="guess the secret code game project">
                     <h3 class="project-title">guess secret code</h3>
+                    <ul class="topics">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React js</li>
+                    </ul>
                     <p class="project-text">
                         An online game made using react framework. When the user starts the game, a secret code is
                         generated.
@@ -186,12 +191,18 @@
                         aria-label="Go to the project code of guess the secret code game" tabindex="10">View</a>
                 </li>
 
-                <li>
-                    <div class="img-container">
-                        <img src="assets/images/projects/events-management-system.png"
-                            alt="events management system react project">
-                    </div>
+                <li class="project">
+                    <img src="assets/images/projects/events-management-system.png"
+                        alt="events management system react project">
                     <h3 class="project-title">events management system</h3>
+                    <ul class="topics">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React js</li>
+                        <li>Cypress</li>
+                        <li>Firebase</li>
+                    </ul>
                     <p class="project-text">
                         A website created using react to manage events. The user can add new events, edit curret events,
                         search through events list and sort them based on name and date.
@@ -200,12 +211,15 @@
                         aria-label="Go to the project code of the events management system" tabindex="11">View</a>
                 </li>
 
-                <li>
-                    <div class="img-container">
-                        <img src="assets/images/projects/training-center-system.png"
-                            alt="training center system android mobile app">
-                    </div>
+                <li class="project">
+                    <img src="assets/images/projects/training-center-system.png"
+                        alt="training center system android mobile app">
                     <h3 class="project-title">Training Center System</h3>
+                    <ul class="topics">
+                        <li>Java</li>
+                        <li>Android Studio</li>
+                        <li>Mobile App</li>
+                    </ul>
                     <p class="project-text">
                         An android mobile application that helps a training center in managing course offering,
                         registration, and admission process.
@@ -215,12 +229,16 @@
                         tabindex="12">View</a>
                 </li>
 
-                <li>
-                    <div class="img-container">
-                        <img src="assets/images/projects/blood-donation-system.png"
-                            alt="blood donation management system project">
-                    </div>
+                <li class="project">
+                    <img src="assets/images/projects/blood-donation-system.png"
+                        alt="blood donation management system project">
                     <h3 class="project-title">blood donation system</h3>
+                    <ul class="topics">
+                        <li>Java</li>
+                        <li>SQL</li>
+                        <li>MySQL</li>
+                        <li>Database System</li>
+                    </ul>
                     <p class="project-text">
                         A database system that provides a simple and effective way to manage blood donation operations.
                         Made using java and MySQL.
@@ -230,12 +248,16 @@
                         tabindex="13">View</a>
                 </li>
 
-                <li>
-                    <div class="img-container">
-                        <img src="assets/images/projects/multi-cycle-RISC-processor.png"
-                            alt="multi-cycle RISC processor project">
-                    </div>
+                <li class="project">
+                    <img src="assets/images/projects/multi-cycle-RISC-processor.png"
+                        alt="multi-cycle RISC processor project">
                     <h3 class="project-title">multi-cycle RISC processor</h3>
+                    <ul class="topics">
+                        <li>Verilog</li>
+                        <li>CPU Design</li>
+                        <li>Active-HDL</li>
+                        <li> RISC Processor</li>
+                    </ul>
                     <p class="project-text">
                         This project develops a RISC multi-cycle processor using the Verilog hardware description
                         language and the active-HDL software tool. It implements five stages processor's architecture.
@@ -244,12 +266,15 @@
                         aria-label="Go to the project code of the multi-cycle RISC processor" tabindex="14">View</a>
                 </li>
 
-                <li>
-                    <div class="img-container">
-                        <img src="assets/images/projects/virtual-memory-project.png"
-                            alt="virtual memory simulation project">
-                    </div>
+                <li class="project">
+                    <img src="assets/images/projects/virtual-memory-project.png"
+                        alt="virtual memory simulation project">
                     <h3 class="project-title">virtual memory simulation</h3>
+                    <ul class="topics">
+                        <li>Java</li>
+                        <li>Operating System</li>
+                        <li>Virtual Simulation</li>
+                    </ul>
                     <p class="project-text">
                         The project illustrates concepts of virtual memory management. The simulation includes
                         several concepts of an Operating System like memory traces, Page Faults, Scheduling, etc.
@@ -263,7 +288,7 @@
 
         <!-- Contact info section -->
         <section class="contact-page" id="contact-page">
-            <h2>Get in touch</h2>
+            <h2>Get in Touch</h2>
 
             <div class="contact-info-container">
                 <form action="mailto:doha.hmeid@gmail.com" method="post" enctype="text/plain">
@@ -416,7 +441,27 @@
         });
 
 
+        //add circle around the cursor
+        const circleElement = document.querySelector('.cursor-circle');
+        const mouse = { x: 0, y: 0 };
+        const circle = { x: 0, y: 0 };
+        const speed = 0.55; // Speed factor: Between 0 and 1 (0 = smoother, 1 = instant)
 
+        window.addEventListener('mousemove', e => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        });
+
+        const tick = () => {
+            // (mouse.x - circle.x) calculates the difference between the current x-coordinate of the mouse and the current x-coordinate of the circle.
+            // (mouse.x - circle.x) * speed multiplies the difference by the speed factor, which determines how quickly the circle should move towards the mouse position
+            circle.x += (mouse.x - circle.x) * speed;
+            circle.y += (mouse.y - circle.y) * speed;
+            circleElement.style.transform = `translate(${circle.x}px, ${circle.y}px)`;  //Update circle element's position
+            window.requestAnimationFrame(tick);  //Call function on next frame
+        }
+
+        tick();
     </script>
 
 </body>
