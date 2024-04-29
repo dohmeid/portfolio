@@ -13,13 +13,10 @@
     <meta name="description"
         content="Hey, I'm Doha Hmeid, a computer systems engineering graduate and front end developer.">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/back.css">
-
-    <link rel="icon" type="image/png" sizes="16x16 32x32 48x48" href="assets/images/icon/icon1.png">
-
-    <script src="back.js"></script>
-
+    <link rel="icon" type="image/png" sizes="16x16 32x32 48x48" href="assets/images/icon/icon.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/back.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/media.css">
 
     <!--including font awesome v4 icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,7 +33,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Pacifico&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
-
 </head>
 
 
@@ -46,6 +42,29 @@
     <div class="splash"></div>
     <div class="bouncing-ball z-depth-4"></div>
     -->
+
+    <!-- the circle pointer around the curosr -->
+    <div class="cursor-circle"></div>
+
+    <!-- the up button -  redirects to home page -->
+    <a href="#home-page" class="up-button" aria-label="Go to home page" tabindex="9">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+    <!-- fixed background containing multiple moving circles -->
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <!-- header, includes the navbar -->
     <header id="nav-header">
@@ -65,23 +84,6 @@
         </nav>
     </header>
 
-    <div class="background">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <div class="cursor-circle"></div>
-
     <!-- main includes the main pages for the website -->
     <main>
 
@@ -97,15 +99,12 @@
                 <a href="./assets/cv/Doha_Hmeid.pdf" class="cv-btn" aria-label="Download CV" tabindex="8"
                     download>Download CV</a>
             </div>
-            <!-- the up button -  redirects to home page -->
-            <a href="#home-page" class="up-button" aria-label="Go to home page" tabindex="9">
-                <i class="fa fa-arrow-up" aria-hidden="true"></i></a>
         </section>
 
         <!-- About section -->
         <section class="about-page" id="about-page">
             <div class="border-div">
-                <div class="img-container"><img src="assets/images/doha/doha2.jpg" alt="Doha Profile Picture"></div>
+                <div class="img-container"><img src="assets/images/doha/doha.jpg" alt="Doha Profile Picture"></div>
                 <article>
                     <h2>Who is Doha?</h2>
                     <p>
@@ -171,7 +170,8 @@
 
         <!-- projects section -->
         <section class="projects-page" id="projects-page">
-            <h2> My Projects</h2>
+            <h2><i class="fa fa-file-code-o" aria-hidden="true"></i>My Projects<i class="fa fa-file-code-o"
+                    aria-hidden="true"></i></h2>
             <ul class="projects">
                 <li class="project">
                     <img src="assets/images/projects/secret-code-game.png" alt="guess the secret code game project">
@@ -396,74 +396,7 @@
         <small>All Rights Reserved</small>
     </footer>
 
-
-    <script type="text/javascript">
-
-        // When the user scrolls down 80px from the top of the document, make the navbar colored, otherwise, keep it transparent
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('nav-header');
-            const logo = document.getElementById("logo");
-            var navLinks = document.querySelectorAll("nav a");
-            if (window.scrollY > window.innerHeight - 150) { // Change 50 to the desired scroll position
-                navbar.style.backgroundColor = '#614e6c'; // Change color when scrolled
-                logo.style.color = '#FEF9FF';
-                navLinks.forEach(function (link) {
-                    if (link.classList.contains("current-page")) {
-                        link.style.color = '#614e6c';
-                    }
-                    else {
-                        link.style.color = '#FEF9FF';
-                    }
-
-                    link.addEventListener("mouseover", function () {
-                        link.style.color = '#614e6c';
-                    });
-                    link.addEventListener("mouseout", function () {
-                        if (link.classList.contains("current-page")) {
-                            link.style.color = '#614e6c';
-                        }
-                        else {
-                            link.style.color = '#FEF9FF';
-                        }
-                    });
-
-                });
-            } else {
-                navbar.style.backgroundColor = 'transparent'; // Set back to transparent
-                logo.style.color = '#614e6c';
-                navLinks.forEach(function (link) {
-                    link.style.color = '#614e6c';
-                    link.addEventListener("mouseout", function () {
-                        link.style.color = '#614e6c';
-                    });
-                });
-            }
-        });
-
-
-        //add circle around the cursor
-        const circleElement = document.querySelector('.cursor-circle');
-        const mouse = { x: 0, y: 0 };
-        const circle = { x: 0, y: 0 };
-        const speed = 0.55; // Speed factor: Between 0 and 1 (0 = smoother, 1 = instant)
-
-        window.addEventListener('mousemove', e => {
-            mouse.x = e.x;
-            mouse.y = e.y;
-        });
-
-        const tick = () => {
-            // (mouse.x - circle.x) calculates the difference between the current x-coordinate of the mouse and the current x-coordinate of the circle.
-            // (mouse.x - circle.x) * speed multiplies the difference by the speed factor, which determines how quickly the circle should move towards the mouse position
-            circle.x += (mouse.x - circle.x) * speed;
-            circle.y += (mouse.y - circle.y) * speed;
-            circleElement.style.transform = `translate(${circle.x}px, ${circle.y}px)`;  //Update circle element's position
-            window.requestAnimationFrame(tick);  //Call function on next frame
-        }
-
-        tick();
-    </script>
-
+    <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>

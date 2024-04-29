@@ -1,16 +1,14 @@
 /*************************** custom css style ********************************/
 :root {
     /*the website's color palette */
-    --purple-light-shade1: #b8a7cbff;
-    --purple-light-shade2: #b089be;
-    --purple-dark-shade: #614e6c;
-
+    --beige-shade: rgb(254, 249, 255);
     --pink-light-shade1: #fbd7e1;
     --pink-light-shade2: #e39bc4;
     --pink-medium-shade1: #e7709c;
     --pink-medium-shade2: #bc518c;
-
-    --beige-shade: rgb(254, 249, 255);
+    --purple-light-shade1: #b8a7cbff;
+    --purple-light-shade2: #b089be;
+    --purple-dark-shade: #614e6c;
 
     /*font combinations*/
     --main-font: "Oswald", sans-serif;
@@ -23,7 +21,6 @@
     0% {
         color: var(--purple-light-shade1);
         border-color: var(--purple-light-shade1);
-
     }
 
     50% {
@@ -61,6 +58,32 @@
     }
 }
 
+@keyframes wiggle {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    20% {
+        transform: rotateZ(-15deg);
+    }
+
+    40% {
+        transform: rotateZ(10deg);
+    }
+
+    60% {
+        transform: rotateZ(-10deg);
+    }
+
+    80% {
+        transform: rotateZ(6deg);
+    }
+
+    100% {
+        transform: rotateZ(-4deg);
+    }
+}
+
 /*************************** general styles ********************************/
 * {
     margin: 0;
@@ -70,16 +93,13 @@
     scroll-behavior: smooth !important;
 }
 
-
-
 html {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 body {
-    overflow-x: hidden;
-
     /*customizing the scroll bar appearance*/
     &::-webkit-scrollbar {
         width: 12px;
@@ -103,12 +123,10 @@ body {
     }
 }
 
-/* Change the color of highlighted text to blue */
-
 ::selection {
+    /* to change the color of highlighted text */
     background-color: var(--pink-light-shade2);
     color: white;
-    /* Optionally change the text color */
 }
 
 main {
@@ -124,19 +142,39 @@ h2 {
     color: var(--purple-dark-shade);
 }
 
-
 .cursor-circle {
     position: fixed;
     z-index: 10;
+    border-radius: 50%;
+    border: 3px solid var(--purple-light-shade2);
     --cursor-size: 2.7rem;
     width: var(--cursor-size);
     height: var(--cursor-size);
-    border-radius: 50%;
-    border: 3px solid var(--purple-light-shade2);
     top: calc(-1 * var(--cursor-size) / 2);
     left: calc(-1 * var(--cursor-size) / 2);
-    pointer-events: none; /* Ensure the circle doesn't interfere with cursor interactions */
-    transition: transform 0.1s ease; 
+    pointer-events: none;
+    /* Ensure the circle doesn't interfere with cursor interactions */
+    transition: transform 0.1s ease;
+}
+
+.up-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0.6rem 0.8rem;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--purple-dark-shade);
+    color: var(--purple-dark-shade);
+    background: var(--beige-shade);
+    z-index: 100;
+
+    &:hover {
+        color: var(--pink-light-shade2);
+        border: 2px solid var(--pink-light-shade1);
+        box-shadow: 3px 3px 2px 2px var(--pink-light-shade2);
+        transition: 0.3s;
+    }
 }
 
 /*************************** header style ********************************/
@@ -147,11 +185,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 8vh;
+    height: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 3rem;
+    padding: 0 2rem;
     opacity: 0.8;
     transition: background-color 0.4s linear;
 
@@ -170,7 +208,7 @@ header {
     }
 
     & nav {
-        width: 26vw;
+        width: 25rem;
 
         & ul {
             display: flex;
@@ -206,7 +244,7 @@ header {
         & .menu-button,
         .menu-button::before,
         .menu-button::after {
-            background-color: #fff;
+            background-color: var(--purple-dark-shade);
             position: absolute;
             height: 3px;
             width: 30px;
@@ -242,11 +280,25 @@ header {
     }
 }
 
+.sections-header {
+    background-color: var(--purple-dark-shade);
+
+    & a {
+        color: var(--beige-shade);
+    }
+
+    & .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+        background-color: var(--beige-shade);
+    }
+}
+
 /*************************** home page style ********************************/
 main .home-page {
     padding-top: 6rem;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -255,8 +307,7 @@ main .home-page {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-bottom-left-radius: 15%;
-    border-bottom-right-radius: 15%;
+    border-bottom-right-radius: 15rem;
     border-bottom: 10px solid var(--pink-light-shade1);
 
     & h1 {
@@ -268,6 +319,7 @@ main .home-page {
         position: relative;
         padding-bottom: 1rem;
         margin-bottom: 1rem;
+        text-align: center;
 
         &:before,
         &:after {
@@ -368,41 +420,18 @@ main .home-page {
         }
 
     }
-
-    .up-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        padding: 0.6rem 0.8rem;
-        font-size: 20px;
-        border-radius: 50%;
-        border: 2px solid var(--purple-dark-shade);
-        color: var(--purple-dark-shade);
-        background: var(--beige-shade);
-        z-index: 100;
-
-        &:hover {
-            color: var(--pink-light-shade2);
-            border: 2px solid var(--pink-light-shade1);
-            box-shadow: 3px 3px 2px 2px var(--pink-light-shade2);
-            transition: 0.3s;
-        }
-    }
 }
 
 /*************************** about page style ********************************/
 main .about-page {
-    width: 100vw;
+    width: 100%;
     padding: 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
     & .border-div {
-        width: 75vw;
-        height: 75vh;
-        max-width: 75vw;
-        max-height: 75vh;
+        max-height: 95rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -415,7 +444,7 @@ main .about-page {
         & .img-container {
             position: relative;
             margin-right: 3rem;
-            max-width: 25vw;
+            max-width: 25rem;
             border-radius: 15px;
             border: 3px solid var(--pink-light-shade2);
 
@@ -487,11 +516,12 @@ main .about-page {
 
 /*************************** skills page style ********************************/
 main .skills-page {
+    width: 100%;
     padding: 4rem 10rem;
     background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);
     background: linear-gradient(to right, #E9E4F0, #dacce3);
-    border-top-right-radius: 25%;
-    border-bottom-left-radius: 25%;
+    border-top-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
     border-top: 10px solid var(--pink-light-shade1);
     border-bottom: 10px solid var(--pink-light-shade1);
     position: relative;
@@ -501,9 +531,9 @@ main .skills-page {
         padding-bottom: 1rem;
 
         & i {
-            font-size: 4rem;
+            font-size: 5rem;
             display: inline-block;
-            margin: 0 1.5rem;
+            margin: 0 2rem;
             color: var(--pink-light-shade2);
             animation: spin 5s linear infinite;
 
@@ -532,8 +562,8 @@ main .skills-page {
 
         & li {
             padding-left: 1.2rem;
-            width: 13vw;
-            height: 9vh;
+            width: 12rem;
+            height: 4.2rem;
             margin: 0.5rem;
             font-family: var(--secondary-font1);
             font-weight: 500;
@@ -566,13 +596,26 @@ main .skills-page {
 
 /*************************** projects page style ********************************/
 main .projects-page {
+    width: 100%;
     padding: 4rem 0;
     /*padding: 4rem 3rem;*/
 
     & h2 {
         text-align: center;
         padding-bottom: 1rem;
-        animation: font-color 2s infinite alternate;
+
+        & i {
+            font-size: 3rem;
+            margin: 0 2rem;
+            color: var(--purple-dark-shade);
+            animation: wiggle 1s linear infinite;
+
+            &:hover {
+                transition: 1s;
+                cursor: pointer;
+                color: var(--purple-light-shade2);
+            }
+        }
     }
 
     & .projects {
@@ -682,13 +725,13 @@ main .projects-page {
 
 /*************************** contact page style ********************************/
 main .contact-page {
-    width: 100vw;
+    width: 100%;
     padding: 4rem 2rem;
     background-image: url("../images/backgrounds/contact-page-background.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-top-left-radius: 25%;
+    border-top-left-radius: 15rem;
     border-top: 10px solid var(--pink-light-shade1);
     display: flex;
     flex-direction: column;
@@ -701,8 +744,8 @@ main .contact-page {
 
     & .contact-info-container {
         margin-top: 3rem;
-        width: 70vw;
-        height: 70vh;
+        width: 65rem;
+        height: 35rem;
         padding: 2rem;
         display: flex;
         align-items: center;
@@ -720,10 +763,11 @@ main .contact-page {
 
         & form {
             height: 100%;
+
             width: 48%;
             padding: 2rem 1rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(3vw, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
             grid-template-rows: auto;
             grid-row-gap: 0.5rem;
             grid-column-gap: 1rem;
@@ -764,6 +808,7 @@ main .contact-page {
                 }
 
                 textarea {
+                    height: 9rem;
                     resize: none;
                 }
             }
@@ -795,7 +840,7 @@ main .contact-page {
 
             & input[type="reset"],
             input[type="submit"] {
-                height: 6vh;
+                height: 3.5rem;
                 cursor: pointer;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -878,7 +923,7 @@ main .contact-page {
                     }
 
                     & .info-container {
-                        width: 10vw;
+                        width: 12rem;
 
                         & h4 {
                             font-family: var(--secondary-font2);
@@ -957,8 +1002,7 @@ main .contact-page {
 
 /*************************** footer style ********************************/
 footer {
-    width: 100vw;
-    height: 10vh;
+    height: 5.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -973,253 +1017,6 @@ footer {
 /*************************** media queries styles ********************************/
 
 /*for small devices - mobile phones*/
-@media (max-width:775px) {
-    html {
-        font-size: 12px;
-    }
-
-    header {
-        /*  background-color: blue;*/
-        padding: 0 1.5rem;
-
-        & nav {
-            width: 20rem;
-
-            /*change the displayment of the menu list to vertical*/
-            & ul {
-                position: absolute;
-                top: 0;
-                left: 0;
-                margin-top: 40px;
-                width: 100%;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                border-top: 1px solid var(--beige-shade);
-
-                & li {
-                    width: 100%;
-                    height: 3em;
-                    color: var(--beige-shade);
-                    background-color: var(--purple-dark-shade);
-                    /*to hide list items, when checkbox not selected*/
-                    overflow: hidden;
-
-                    &:not(:last-child) {
-                        border-bottom: 0.5px solid var(--beige-shade);
-                    }
-
-                    & a {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-                        height: 100%;
-
-                        &:hover {
-                            box-shadow: inset 0px 0 0 0 var(--beige-shade);
-                            background-color: var(--beige-shade);
-                            transition: 0.5s;
-                        }
-                    }
-                }
-            }
-
-            /*display the menu button*/
-            & .menu-label {
-                cursor: pointer;
-                display: flex;
-                justify-content: end;
-                align-items: center;
-            }
-
-            /*if the menu button is not checked, hide the menu list*/
-            & .menu-toggle~ul li {
-                height: 0;
-                transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-            }
-
-            /*when the menu button is checked, display the menu list*/
-            & .menu-toggle:checked~ul li {
-                height: 3em;
-                transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-            }
-        }
-    }
-
-    main .home-page {
-        height: 90vh;
-        padding-top: 8rem;
-    }
-
-    main .about-page {
-        padding-top: 4rem;
-        height: auto;
-        flex-direction: column;
-
-        & .img-container {
-            margin-right: 0rem;
-
-            & img {
-                width: 22rem;
-                border-radius: 15px;
-            }
-        }
-
-        & article {
-            padding: 2rem 0;
-            width: auto;
-
-            & h2 {
-                font-size: 2.2rem;
-                border-bottom: 5px solid var(--purple-dark-shade);
-            }
-        }
-    }
-
-    main .skills-page {
-        height: auto;
-        padding: 4rem 1rem 3rem 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        & div {
-            justify-content: center;
-        }
-
-        & h3 {
-            padding-bottom: 0rem;
-        }
-
-        & ul {
-            width: 100%;
-        }
-    }
-
-    main .projects-page {
-        padding: 4rem 0.5rem;
-
-        & ul {
-            & li {
-                width: 25rem;
-                height: 19rem;
-
-                & .img-container {
-                    & img {
-                        height: 9rem;
-                    }
-                }
-            }
-        }
-    }
-
-    main .contact-page {
-        height: 120vh;
-        background-position: center;
-        background-repeat: repeat-y;
-        background-size: contain;
-
-        & .contact-info-container {
-            flex-wrap: wrap;
-            margin-top: 1rem;
-
-            & article {
-                background-color: rgba(255, 255, 255, 0.6);
-                margin-top: 2rem;
-
-                & .social-media {
-                    margin-top: 1.7rem;
-                }
-            }
-        }
-    }
-}
 
 /*for medium devices -  tablets*/
-@media (min-width: 776px) and (max-width: 1036px) {
-    html {
-        font-size: 14px;
-    }
-
-    header {
-        /*  background-color: tomato;*/
-        padding: 0 1.5rem;
-
-        & navbar {
-            width: 22rem;
-
-            & ul li a {
-                padding: 0.2rem;
-            }
-        }
-    }
-
-    main .home-page {
-        padding-top: 8rem;
-    }
-
-    main .about-page {
-        height: 90vh;
-        padding: 1rem 2rem;
-
-        & article {
-            width: 35rem;
-
-            & h2 {
-                font-size: 2.5rem;
-                border-bottom: 8px solid var(--purple-dark-shade);
-                margin-bottom: 1rem;
-            }
-        }
-    }
-
-    main .skills-page {
-        height: auto;
-        padding: 4rem 1rem 3rem 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        & div {
-            justify-content: center;
-        }
-
-        & h3 {
-            padding-bottom: 0rem;
-        }
-
-        & ul {
-            width: 100%;
-        }
-    }
-
-    main .projects-page {
-        padding: 4rem 0.5rem;
-
-        & ul {
-            & li {
-                width: 25rem;
-                height: 19rem;
-
-                & .img-container {
-                    & img {
-                        height: 9rem;
-                    }
-                }
-            }
-        }
-    }
-
-    main .contact-page {
-        & .contact-info-container {
-            margin-top: 2rem;
-
-            & form {
-                width: 25rem;
-            }
-        }
-    }
-}
+@media (min-width: 776px) and (max-width: 1036px) {}
