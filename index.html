@@ -16,18 +16,14 @@
     <link rel="icon" type="image/png" sizes="16x16 32x32 48x48" href="assets/images/icon/icon.png">
     <link rel="stylesheet" type="text/css" href="./assets/css/all.min.css">
 
-    <!--including font awesome v4 icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!--including bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--including font awesome v5 icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!--including devicon icons - used in the skills section -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
     <!--including google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Pacifico&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
@@ -35,10 +31,12 @@
 
 
 <body>
-    <!-- Splash Screen -->
-    <div class="splash"></div>
-    <div class="bouncing-ball z-depth-4"></div>
-    
+    <!-- Splash Screen-->
+    <div class="splash-screen" id="splash-screen">
+        <p>Loading...</p>
+        <div class="eyes"></div>
+    </div>
+
     <!-- the circle pointer around the curosr -->
     <div class="cursor-circle"></div>
 
@@ -132,19 +130,19 @@
 
         <!-- skills section -->
         <section class="skills-page" id="skills-page">
-            <h2><i class="fa fa-star-o" aria-hidden="true"></i>Skills<i class="fa fa-star-o" aria-hidden="true"></i>
+            <h2><i class="far fa-star" aria-hidden="true"></i>Skills<i class="far fa-star" aria-hidden="true"></i>
             </h2>
             <h3>
                 Below are some of the skills I've developed during my university studies and software development
                 journey.</h3>
             <ul>
-                <li><i class="fa fa-html5" aria-hidden="true"></i>HTML</li>
-                <li><i class="devicon-css3-plain"></i>CSS</li>
-                <li><i class="devicon-javascript-plain"></i>JavaScript</li>
+                <li><i class="fab fa-html5" aria-hidden="true"></i>HTML</li>
+                <li><i class="fab fa-css3-alt"></i>CSS</li>
+                <li><i class="fab fa-js-square"></i>JavaScript</li>
                 <li><i class="devicon-typescript-plain"></i>TypeScript</li>
-                <li><i class="devicon-react-original"></i>React js</li>
-                <li><i class="bi bi-git"></i>GIT</li>
-                <li><i class="fa fa-github" aria-hidden="true"></i>Github</li>
+                <li><i class="fab fa-react"></i>React js</li>
+                <li><i class="devicon-git-plain"></i>GIT</li>
+                <li><i class="fab fa-github"></i>Github</li>
                 <li><i class="devicon-cypressio-plain"></i>Cypress</li>
 
                 <li><i class="devicon-java-plain"></i>Java</li>
@@ -156,7 +154,7 @@
                 <li><i class="devicon-figma-plain"></i>Figma</li>
                 <li><i class="devicon-vscode-plain"></i>VS code</li>
                 <li><i class="devicon-firebase-plain"></i>Firebase</li>
-                <li><i class="fa fa-linux" aria-hidden="true"></i>Linux</li>
+                <li><i class="fab fa-linux"></i>Linux</li>
                 <li><i class="devicon-android-plain"></i>Android Studio</li>
                 <li><i class="devicon-matlab-plain"></i>Matlab</li>
                 <li><i class="devicon-arduino-plain"></i>Arduino</li>
@@ -165,8 +163,8 @@
 
         <!-- projects section -->
         <section class="projects-page" id="projects-page">
-            <h2><i class="fa fa-file-code-o" aria-hidden="true"></i>My Projects<i class="fa fa-file-code-o"
-                    aria-hidden="true"></i></h2>
+            <h2><i class="fas fa-code" aria-hidden="true"></i>My Projects<i class="fas fa-code" aria-hidden="true"></i>
+            </h2>
             <ul class="projects">
                 <li class="project">
                     <img src="assets/images/projects/secret-code-game.png" alt="guess the secret code game project">
@@ -286,7 +284,7 @@
             <h2>Get in Touch</h2>
 
             <div class="contact-info-container">
-                <form action="mailto:doha.hmeid@gmail.com" method="post" enctype="text/plain">
+                <form method="post" action="#">
                     <div class="name-container row">
                         <label for="name">FULL NAME</label>
                         <input type="text" class="name" id="name" name="name" required tabindex="16">
@@ -315,7 +313,7 @@
                     </p>
                     <ul class="info-list">
                         <li>
-                            <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
                             <div class="info-container">
                                 <h4>Location</h4>
                                 <p>Ramallah, Palestine</p>
@@ -348,35 +346,35 @@
                             <a href="https://www.linkedin.com/in/dohmeid/" target="_blank" aria-label="Go to LinkedIn"
                                 tabindex="22">
                                 <span class="tooltip">LinkedIn</span>
-                                <span><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                                <span><i class="fab fa-linkedin-in" aria-hidden="true"></i></span>
                             </a>
                         </li>
                         <li>
                             <a href="https://github.com/dohmeid" target="_blank" aria-label="Go to GitHub"
                                 tabindex="23">
                                 <span class="tooltip">GitHub</span>
-                                <span><i class="fa fa-github" aria-hidden="true"></i></span>
+                                <span><i class="fab fa-github-alt" aria-hidden="true"></i></span>
                             </a>
                         </li>
                         <li>
                             <a href="https://discord.com/users/953030181692530729" target="_blank"
                                 aria-label="Go to discord" tabindex="24">
                                 <span class="tooltip">Discord</span>
-                                <span><i class="bi bi-discord"></i></span>
+                                <span><i class="fab fa-discord" aria-hidden="true"></i></span>
                             </a>
                         </li>
                         <li>
                             <a href="https://m.facebook.com/doha.hmeid?mibextid=LQQJ4d" target="_blank"
                                 aria-label="Go to Facebook" tabindex="25">
                                 <span class="tooltip">Facebook</span>
-                                <span><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                                <span><i class="fab fa-facebook-f" aria-hidden="true"></i></span>
                             </a>
                         </li>
                         <li>
                             <a href="https://www.instagram.com/dohmeid/" target="_blank" aria-label="Go to Instagram"
                                 tabindex="26">
                                 <span class="tooltip">Instagram</span>
-                                <span><i class="fa fa-instagram" aria-hidden="true"></i>
+                                <span><i class="fab fa-instagram" aria-hidden="true"></i>
                                 </span>
                             </a>
                         </li>

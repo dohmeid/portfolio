@@ -1,4 +1,5 @@
 //******************************DOM OBJECTS******************************
+const loader = document.getElementById("splash-screen");
 const navbar = document.getElementById("nav-header");
 const circleElement = document.querySelector(".cursor-circle");
 const mouse = { x: 0, y: 0 };
@@ -6,7 +7,12 @@ const circle = { x: 0, y: 0 };
 const speed = 0.55; // Speed factor: Between 0 and 1 (0 = smoother, 1 = instant)
 
 //****************************EVENT LISTENERS****************************
-// When the user scrolls down 150px from the top of the document, make the navbar colored, otherwise, keep it transparent
+//hide the splash screen after 2.5s
+setTimeout(() => {
+  loader.classList.add("hidden-splash");
+}, 2500);
+
+//when the user scrolls down 150px from the top of the document, make the navbar colored, otherwise, keep it transparent
 window.addEventListener("scroll", () => {
   if (window.scrollY > window.innerHeight - 150) {
     navbar.classList.add("sections-header");
