@@ -1,3 +1,13 @@
+/*************************** importing libraries ********************************/
+/*including font awesome v5 icons*/
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+
+/*including devicon icons - used in the skills section*/
+@import url("https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css");
+
+/*including google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Pacifico&family=Quicksand:wght@300..700&display=swap");
+
 /*************************** custom css style ********************************/
 :root {
     /*the website's color palette */
@@ -67,13 +77,10 @@
     scroll-behavior: smooth !important;
 }
 
-html {
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-}
-
 body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 
     /*customizing the scroll bar appearance*/
     &::-webkit-scrollbar {
@@ -132,16 +139,18 @@ h2 {
     align-items: center;
     transform: translateY(-50%);
 
-    p {
+    & p {
         width: 35rem;
-        font-size: 5rem;
+        font-size: 4rem;
         letter-spacing: 1rem;
-        font-family: var(--main-font);
+        font-family: monospace;
         color: var(--purple-light-shade1);
-        text-shadow: 4px 2px 0px var(--purple-dark-shade);
+        text-shadow: 2px 1px 0px var(--purple-dark-shade);
         font-weight: bold;
         margin-bottom: 2rem;
         text-align: center;
+        clip-path: inset(0 5ch 0 0);
+        animation: loader 1s steps(5) infinite;
     }
 
     .eyes {
@@ -165,7 +174,7 @@ h2 {
     }
 }
 
-@keyframes loader-animation {
+@keyframes loader {
     to {
         clip-path: inset(0 -1ch 0 0)
     }
@@ -203,7 +212,6 @@ h2 {
     transform: translateY(100%);
     transition: all .75s ease;
 }
-
 
 /*************************** cursor style ********************************/
 .cursor-circle {
@@ -609,7 +617,7 @@ main .home-page {
 
 /*************************** about page style ********************************/
 main .about-page {
-    width: 85rem;
+    width: 100%;
     padding: 7rem;
     display: flex;
     align-items: center;
@@ -706,7 +714,6 @@ main .skills-page {
     background: linear-gradient(to right, #E9E4F0, #dacce3);
     border-top: 10px solid var(--pink-light-shade1);
     border-bottom: 10px solid var(--pink-light-shade1);
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1309,9 +1316,10 @@ footer {
     }
 
     main .about-page {
+        padding: 7rem 3rem;
 
         & .border-div {
-            max-width: 90vw;
+            width: 90vw;
             flex-direction: column;
             border-radius: 1rem;
             padding-top: 3rem;
@@ -1503,6 +1511,7 @@ footer {
     }
 
     main .about-page {
+        padding: 7rem 4rem;
 
         & .border-div {
             max-width: 90vw;
