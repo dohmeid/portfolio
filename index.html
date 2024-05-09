@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Doha Hmeid | Front-end Developer</title>
+    <meta name="author" content="Doha Hmeid">
+    <meta name="keywords"
+        content="Doha Hmeid, dohmeid, Front-end, developer, Software engineer, web developer, HTML, CSS, javaScript, React js, portfolio">
+    <meta name="description"
+        content="Hey, I'm Doha Hmeid, a computer systems engineering graduate and front end developer.">
+
+    <link rel="icon" type="image/png" sizes="16x16 32x32 48x48" href="assets/images/icon/icon.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/all.min.css">
+</head>
+
+
+<body>
+    <!-- Splash Screen-->
+    <div class="splash-screen" id="splash-screen">
+        <p>Loading...</p>
+        <div class="eyes"></div>
+    </div>
+
+    <!-- the circle pointer around the curosr -->
+    <div class="cursor-circle"></div>
+
+    <!-- the up button -  redirects to home page -->
+    <a href="#home-page" class="up-button" aria-label="Go to home page" tabindex="9">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <!-- fixed background containing multiple moving circles -->
+    <div class="circles-background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- header, includes the navbar -->
+    <header id="nav-header">
+        <div class="logo"><a id="logo" href="#home-page" aria-label="Go to home page" tabindex="0"> &lt;DOHA
+                HMEID/&gt;</a></div>
+        <nav>
+            <input type="checkbox" class="menu-toggle" id="menu-toggle" name="menu-toggle" value="nav menu toggle"
+                tabindex="1">
+            <label class="menu-label" for="menu-toggle"><span class='menu-button'></span></label>
+            <ul>
+                <li><a href="#home-page" class="current-page" aria-label="Go to home page" tabindex="2">Home</a></li>
+                <li><a href="#about-page" aria-label="Go to about page" tabindex="3">About</a></li>
+                <li><a href="#skills-page" aria-label="Go to skills page" tabindex="4">Skills</a></li>
+                <li><a href="#projects-page" aria-label="Go to projects page" tabindex="5">Projects</a></li>
+                <li><a href="#contact-page" aria-label="Go to contact page" tabindex="6">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main includes the main pages for the website -->
+    <main>
+
+        <!-- home page section -->
+        <section class="home-page" id="home-page">
+            <h1>DOHA HMEID</h1>
+            <div class="description">
+                <h2>Computer Systems Engineer &nbsp;|&nbsp; Front-end Developer &nbsp;|&nbsp; Tech Enthusiast</h2>
+                <p>Passionate about innovation and lifelong learning</p>
+            </div>
+            <div class="buttons-container">
+                <a href="#contact-page" class="contact-btn" aria-label="Go to contact page" tabindex="7">Contact Me</a>
+                <a href="./assets/cv/Doha_Hmeid.pdf" class="cv-btn" aria-label="Download CV" tabindex="8"
+                    download>Download CV</a>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section class="about-page" id="about-page">
+            <div class="border-div">
+                <div class="img-container"><img src="assets/images/doha/doha.jpg" alt="Doha Profile Picture"></div>
+                <article>
+                    <h2>Who is Doha?</h2>
+                    <p>
+                        Greetings! I'm Doha Hmeid, a <mark>computer-systems engineering graduate</mark> from Birzeit
+                        University, where I
+                        graduated with honors. Currently in my final semester, I'm wrapping up my remaining academic
+                        hours
+                        to officially obtain my degree.
+                    </p>
+                    <p>
+                        Specializing in <mark>Front-End Development</mark>, I thrive on creating dynamic and
+                        high-performance web
+                        applications. Proficient in React.js, JavaScript, HTML5, and CSS, I transform design concepts
+                        into
+                        interactive digital experiences.
+                    </p>
+                    <p>
+                        Currently, I am enrolled in <mark>Foothill Technology Solutions</mark> training program where I
+                        am
+                        expanding my
+                        Skills and gaining more hands-on experience in the field. Looking ahead, I'm eagerly
+                        anticipating
+                        the opportunities for learning, growth, and <mark>innovation</mark> that lie ahead in the
+                        ever-evolving tech
+                        industry.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- skills section -->
+        <section class="skills-page" id="skills-page">
+            <h2><i class="far fa-star" aria-hidden="true"></i>Skills<i class="far fa-star" aria-hidden="true"></i>
+            </h2>
+            <h3>
+                Below are some of the skills I've developed during my university studies and software development
+                journey.</h3>
+            <ul>
+                <li><i class="fab fa-html5" aria-hidden="true"></i>HTML</li>
+                <li><i class="fab fa-css3-alt"></i>CSS</li>
+                <li><i class="fab fa-js-square"></i>JavaScript</li>
+                <li><i class="devicon-typescript-plain"></i>TypeScript</li>
+                <li><i class="fab fa-react"></i>React js</li>
+                <li><i class="devicon-git-plain"></i>GIT</li>
+                <li><i class="fab fa-github"></i>Github</li>
+                <li><i class="devicon-cypressio-plain"></i>Cypress</li>
+
+                <li><i class="devicon-java-plain"></i>Java</li>
+                <li><i class="devicon-c-plain"></i>C</li>
+                <li><i class="devicon-python-plain"></i>Python</li>
+                <li><i class="devicon-azuresqldatabase-plain"></i>SQL</li>
+                <li><i class="devicon-mysql-original"></i>MySQL</li>
+
+                <li><i class="devicon-figma-plain"></i>Figma</li>
+                <li><i class="devicon-vscode-plain"></i>VS code</li>
+                <li><i class="devicon-firebase-plain"></i>Firebase</li>
+                <li><i class="fab fa-linux"></i>Linux</li>
+                <li><i class="devicon-android-plain"></i>Android Studio</li>
+                <li><i class="devicon-matlab-plain"></i>Matlab</li>
+                <li><i class="devicon-arduino-plain"></i>Arduino</li>
+            </ul>
+        </section>
+
+        <!-- projects section -->
+        <section class="projects-page" id="projects-page">
+            <h2><i class="fas fa-code" aria-hidden="true"></i>My Projects<i class="fas fa-code" aria-hidden="true"></i>
+            </h2>
+            <ul class="projects">
+                <li class="project">
+                    <img src="assets/images/projects/secret-code-game.png" alt="guess the secret code game project">
+                    <h3 class="project-title">guess secret code</h3>
+                    <ul class="topics">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React js</li>
+                    </ul>
+                    <p class="project-text">
+                        An online game made using react framework. When the user starts the game, a secret code is
+                        generated.
+                        The player has 8 chances for guessing the code.
+                    </p>
+                    <a class="code-link" href="https://github.com/dohmeid/Task2" target="_blank"
+                        aria-label="Go to the project code of guess the secret code game" tabindex="10">View</a>
+                </li>
+
+                <li class="project">
+                    <img src="assets/images/projects/events-management-system.png"
+                        alt="events management system react project">
+                    <h3 class="project-title">events management system</h3>
+                    <ul class="topics">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React js</li>
+                        <li>Cypress</li>
+                        <li>Firebase</li>
+                    </ul>
+                    <p class="project-text">
+                        A website created using react to manage events. The user can add new events, edit curret events,
+                        search through events list and sort them based on name and date.
+                    </p>
+                    <a class="code-link" href="https://github.com/dohmeid/Task1" target="_blank"
+                        aria-label="Go to the project code of the events management system" tabindex="11">View</a>
+                </li>
+
+                <li class="project">
+                    <img src="assets/images/projects/training-center-system.png"
+                        alt="training center system android mobile app">
+                    <h3 class="project-title">Training Center System</h3>
+                    <ul class="topics">
+                        <li>Java</li>
+                        <li>Android Studio</li>
+                        <li>Mobile App</li>
+                    </ul>
+                    <p class="project-text">
+                        An android mobile application that helps a training center in managing course offering,
+                        registration, and admission process.
+                    </p>
+                    <a class="code-link" href="https://github.com/dohmeid/TrainingCenterProject" target="_blank"
+                        aria-label="Go to the project code of the training center system android mobile app"
+                        tabindex="12">View</a>
+                </li>
+
+                <li class="project">
+                    <img src="assets/images/projects/blood-donation-system.png"
+                        alt="blood donation management system project">
+                    <h3 class="project-title">blood donation system</h3>
+                    <ul class="topics">
+                        <li>Java</li>
+                        <li>SQL</li>
+                        <li>MySQL</li>
+                        <li>Database System</li>
+                    </ul>
+                    <p class="project-text">
+                        A database system that provides a simple and effective way to manage blood donation operations.
+                        Made using java and MySQL.
+                    </p>
+                    <a class="code-link" href="https://github.com/dohmeid/Blood-Donation-System" target="_blank"
+                        aria-label="Go to the project code of the blood donation management system"
+                        tabindex="13">View</a>
+                </li>
+
+                <li class="project">
+                    <img src="assets/images/projects/multi-cycle-RISC-processor.png"
+                        alt="multi-cycle RISC processor project">
+                    <h3 class="project-title">multi-cycle RISC processor</h3>
+                    <ul class="topics">
+                        <li>Verilog</li>
+                        <li>CPU Design</li>
+                        <li>Active-HDL</li>
+                        <li> RISC Processor</li>
+                    </ul>
+                    <p class="project-text">
+                        This project develops a RISC multi-cycle processor using the Verilog hardware description
+                        language and the active-HDL software tool. It implements five stages processor's architecture.
+                    </p>
+                    <a class="code-link" href="https://github.com/dohmeid/multi-cycle-RISC-processor" target="_blank"
+                        aria-label="Go to the project code of the multi-cycle RISC processor" tabindex="14">View</a>
+                </li>
+
+                <li class="project">
+                    <img src="assets/images/projects/virtual-memory-project.png"
+                        alt="virtual memory simulation project">
+                    <h3 class="project-title">virtual memory simulation</h3>
+                    <ul class="topics">
+                        <li>Java</li>
+                        <li>Operating System</li>
+                        <li>Virtual Simulation</li>
+                    </ul>
+                    <p class="project-text">
+                        The project illustrates concepts of virtual memory management. The simulation includes
+                        several concepts of an Operating System like memory traces, Page Faults, Scheduling, etc.
+                    </p>
+                    <a class="code-link" href="https://github.com/dohmeid/Virtual-Memory-Management-Simulation"
+                        target="_blank" aria-label="Go to the project code of the virtual memory simulation"
+                        tabindex="15">View</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Contact info section -->
+        <section class="contact-page" id="contact-page">
+            <h2>Get in Touch</h2>
+
+            <div class="contact-info-container">
+                <form method="post" action="#">
+                    <div class="name-container row">
+                        <label for="name">FULL NAME</label>
+                        <input type="text" class="name" id="name" name="name" required tabindex="16">
+                    </div>
+                    <div class="email-container row">
+                        <label for="email">EMAIL ADDRESS</label>
+                        <input type="email" class="email" id="email" name="email" required tabindex="17">
+                    </div>
+                    <div class="subject-container row">
+                        <label for="subject">SUBJECT</label>
+                        <input type="text" class="subject" id="subject" name="subject" required tabindex="18">
+                    </div>
+                    <div class="message-container row">
+                        <label for="message">MESSAGE</label>
+                        <textarea class="message" id="message" rows="8" name="message" required
+                            tabindex="19"></textarea>
+                    </div>
+                    <input type="submit" value="Send Message" tabindex="20">
+                    <input type="reset" value="Reset" tabindex="21">
+                </form>
+
+                <article>
+                    <h3>Contact Info</h3>
+                    <p> Hello there! If you have any questions, comments, or just want to connect, I'm all ears!
+                        Feel free to contact me anytime, and I'll get back to you as soon as I can.
+                    </p>
+                    <ul class="info-list">
+                        <li>
+                            <span><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                            <div class="info-container">
+                                <h4>Location</h4>
+                                <p>Ramallah, Palestine</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <div class="info-container">
+                                <h4>Email</h4>
+                                <p>doha.hmeid@gmail.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <div class="info-container">
+                                <h4>Mobile Number</h4>
+                                <p>+(970) 59-802-5104</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                            <div class="info-container">
+                                <h4>Languages</h4>
+                                <p>English + Arabic</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="social-media">
+                        <li>
+                            <a href="https://www.linkedin.com/in/dohmeid/" target="_blank" aria-label="Go to LinkedIn"
+                                tabindex="22">
+                                <span class="tooltip">LinkedIn</span>
+                                <span><i class="fab fa-linkedin-in" aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/dohmeid" target="_blank" aria-label="Go to GitHub"
+                                tabindex="23">
+                                <span class="tooltip">GitHub</span>
+                                <span><i class="fab fa-github-alt" aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://discord.com/users/953030181692530729" target="_blank"
+                                aria-label="Go to discord" tabindex="24">
+                                <span class="tooltip">Discord</span>
+                                <span><i class="fab fa-discord" aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://m.facebook.com/doha.hmeid?mibextid=LQQJ4d" target="_blank"
+                                aria-label="Go to Facebook" tabindex="25">
+                                <span class="tooltip">Facebook</span>
+                                <span><i class="fab fa-facebook-f" aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/dohmeid/" target="_blank" aria-label="Go to Instagram"
+                                tabindex="26">
+                                <span class="tooltip">Instagram</span>
+                                <span><i class="fab fa-instagram" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>Copyright &copy; 2024 - Designed & Developed by Doha Hmeid</small>
+        <small>All Rights Reserved</small>
+    </footer>
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+
+</html>
